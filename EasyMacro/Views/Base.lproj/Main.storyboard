@@ -109,13 +109,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-SW-Clc">
-                                <rect key="frame" x="149.5" y="627.5" width="115.5" height="54.5"/>
+                                <rect key="frame" x="149.5" y="635.5" width="115.5" height="46.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.82745098039999998" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <directionalEdgeInsets key="contentInsets" top="17" leading="40" bottom="17" trailing="40"/>
+                                    <directionalEdgeInsets key="contentInsets" top="13" leading="40" bottom="13" trailing="40"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -149,13 +149,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NhI-Rh-L5z" firstAttribute="centerY" secondItem="cIE-dO-Fsy" secondAttribute="centerY" id="838-7x-VOP"/>
+                            <constraint firstItem="ozk-SW-Clc" firstAttribute="top" secondItem="NhI-Rh-L5z" secondAttribute="bottom" constant="79.5" id="Bi7-OP-eBY"/>
                             <constraint firstItem="vsq-md-480" firstAttribute="leading" secondItem="MWB-FS-saB" secondAttribute="leading" constant="32" id="Cxk-mt-Wuk"/>
                             <constraint firstItem="ozk-SW-Clc" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="EUZ-Rx-Byb"/>
                             <constraint firstItem="33g-8u-fRq" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" constant="30" id="FaS-BU-F8b"/>
-                            <constraint firstItem="ozk-SW-Clc" firstAttribute="top" relation="lessThanOrEqual" secondItem="NhI-Rh-L5z" secondAttribute="bottom" constant="71.5" id="P3n-Dy-ZZk"/>
                             <constraint firstItem="NhI-Rh-L5z" firstAttribute="top" secondItem="vsq-md-480" secondAttribute="bottom" constant="72" id="UL0-Js-COR"/>
                             <constraint firstItem="vsq-md-480" firstAttribute="top" relation="lessThanOrEqual" secondItem="MWB-FS-saB" secondAttribute="top" constant="180" id="apO-Rw-oj6"/>
-                            <constraint firstItem="MWB-FS-saB" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="ozk-SW-Clc" secondAttribute="bottom" constant="180" id="cd6-S3-4SF"/>
+                            <constraint firstItem="MWB-FS-saB" firstAttribute="bottom" secondItem="ozk-SW-Clc" secondAttribute="bottom" constant="180" id="cd6-S3-4SF"/>
                             <constraint firstItem="MWB-FS-saB" firstAttribute="trailing" secondItem="vsq-md-480" secondAttribute="trailing" constant="32" id="e8z-5k-YAI"/>
                             <constraint firstItem="NhI-Rh-L5z" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" constant="-30" id="eBp-yk-SkO"/>
                             <constraint firstItem="33g-8u-fRq" firstAttribute="centerY" secondItem="cIE-dO-Fsy" secondAttribute="centerY" id="lTm-5U-mOH"/>
@@ -191,13 +191,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adi-DA-qZd">
-                                <rect key="frame" x="149.5" y="627.5" width="115.5" height="54.5"/>
+                                <rect key="frame" x="149.5" y="635.5" width="115.5" height="46.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.82745098039999998" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <directionalEdgeInsets key="contentInsets" top="17" leading="40" bottom="17" trailing="40"/>
+                                    <directionalEdgeInsets key="contentInsets" top="13" leading="40" bottom="13" trailing="40"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
