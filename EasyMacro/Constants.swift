@@ -12,17 +12,14 @@ struct K {
     
     //MARK: - WelcomeVC
     
-    static let welcomeImageName = "appleRaisinBackground"
+    static let welcomeTitle = "Welcome to EasyMacro"
+    static let welcomeText1 = "A quick and personalized questionnaire that will give you a tailored set of macros and help you achieve your health and fitness goals."
+    static let welcomeText2 = "Let's begin this journey towards \na healthier and happier you !"
+    static let welcomeButtonTitle = "Kikou" //Get Started"
     
     static let welcomeTitlePolice = "Pacifico"
     static let welcomeTextPolice1 = "Jost-Light"
     static let welcomeTextPolice2 = "Jost-SemiBold"
-    
-    static let welcomeTitle = "Welcome to EasyMacro"
-    static let welcomeText1 = "A quick and personalized questionnaire that will give you a tailored set of macros and help you achieve your health and fitness goals."
-    static let welcomeText2 = "Let's begin this journey towards \na healthier and happier you !"
-
-    static let welcomeButtonTitle = "Get Started"
     
     //MARK: - Questions
     
@@ -30,13 +27,18 @@ struct K {
     static let activityQuestion = "What is your activity level ?"
     static let goalsQuestion = "What is your goals ?"
     
-    static let questionPolice = "Jost-Light"
+    static let questionPolice = "Jost-SemiBold"
+    
+    //MARK: - Metrics
+    
+    static let defaultWeight = 70
+    static let minWeight = 20
+    static let maxWeight = 300
+    static let kgMetrics = "Kg"
+    
+    static let kgPolice = "Jost-SemiBold"
     
     //MARK: - Answers
-    
-    static let defaultWeight = "70"
-    static let correctedWeight = "20"
-    static let kgMetrics = "kg"
     
     static let weightAnswer1 = "Exercises sometimes & normal activity"
     static let weightAnswer2 = "1h of exercise, 3-5 times per week"

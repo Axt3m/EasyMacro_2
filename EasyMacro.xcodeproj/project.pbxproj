@@ -19,6 +19,8 @@
 		C60A1F5E29BF37F70061F3BC /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */; };
 		C60A1F5F29BF37F70061F3BC /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */; };
 		C67D3DEB29C1BD8A00DECB3A /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */; };
+		C682DBF729C1EC7700B41A0E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF629C1EC7700B41A0E /* ActivityViewController.swift */; };
+		C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF829C1FE3500B41A0E /* Visual.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
 		C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
 		C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		C682DBF629C1EC7700B41A0E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		C682DBF829C1FE3500B41A0E /* Visual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visual.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			children = (
 				C60A1F3F29BF28CB0061F3BC /* AppDelegate.swift */,
 				C60A1F4129BF28CB0061F3BC /* SceneDelegate.swift */,
+				C682DBFA29C1FE3B00B41A0E /* Model */,
 				C60A1F5929BF36110061F3BC /* Views */,
 				C60A1F5829BF35FD0061F3BC /* Controllers */,
 				C60A1F4829BF28CE0061F3BC /* Assets.xcassets */,
@@ -97,6 +102,7 @@
 			children = (
 				C60A1F4329BF28CB0061F3BC /* WelcomeViewController.swift */,
 				C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */,
+				C682DBF629C1EC7700B41A0E /* ActivityViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +113,14 @@
 				C60A1F4529BF28CB0061F3BC /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C682DBFA29C1FE3B00B41A0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C682DBF829C1FE3500B41A0E /* Visual.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */,
+				C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */,
+				C682DBF729C1EC7700B41A0E /* ActivityViewController.swift in Sources */,
 				C60A1F5729BF357A0061F3BC /* Constants.swift in Sources */,
 				C60A1F4029BF28CB0061F3BC /* AppDelegate.swift in Sources */,
 				C60A1F4229BF28CB0061F3BC /* SceneDelegate.swift in Sources */,
