@@ -27,7 +27,7 @@ class WeightViewController: UIViewController {
         weightPicker.selectRow(K.defaultWeight - K.minWeight, inComponent: 0, animated: true)
         
         
-        Visual.customLabel(to: question1Label, text: K.weightQuestion, font: K.questionPolice, size: 22)
+        Visual.customLabel(to: question1Label, text: K.weightQuestion, font: K.questionPolice, size: 25)
         Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 18)
         Visual.buttonShadowAndFont(to: nextButton)
     }
