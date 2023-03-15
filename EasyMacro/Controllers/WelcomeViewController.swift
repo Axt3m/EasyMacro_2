@@ -16,6 +16,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,9 @@ class WelcomeViewController: UIViewController {
         Visual.customLabel(to: descriptionLabel1, text: K.welcomeText1, font: K.welcomeTextPolice1, size: 18)
         Visual.customLabel(to: descriptionLabel2, text: K.welcomeText2, font: K.welcomeTextPolice2, size: 15)
         Visual.buttonShadowAndFont(to: startButton, text: K.welcomeButtonTitle)
+
+        let yourBackImage = UIImage(named: "backArrow")
+        self.navigationController?.navigationBar.backItem?.title = "Hello"
 
     }
     

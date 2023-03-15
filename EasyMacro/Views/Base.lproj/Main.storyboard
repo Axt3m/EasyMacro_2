@@ -88,7 +88,9 @@
                             <constraint firstItem="lgu-En-5H6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="xt7-2U-7Ts"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="riD-r2-J5Z"/>
+                    <navigationItem key="navigationItem" id="riD-r2-J5Z">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Qwk-73-trr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel1" destination="lgu-En-5H6" id="Tye-qT-i7Z"/>
                         <outlet property="descriptionLabel2" destination="CqD-KF-z5Q" id="x7H-uW-UM0"/>
@@ -109,13 +111,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-SW-Clc">
-                                <rect key="frame" x="144.5" y="769.5" width="125.5" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.82745098039999998" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <directionalEdgeInsets key="contentInsets" top="11" leading="45" bottom="11" trailing="45"/>
+                                    <directionalEdgeInsets key="contentInsets" top="11" leading="60" bottom="11" trailing="60"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -162,7 +164,9 @@
                             <constraint firstItem="vsq-md-480" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="ytl-Rb-ZRP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mUb-SD-ORh"/>
+                    <navigationItem key="navigationItem" id="mUb-SD-ORh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tQj-4n-he7"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="kgLabel" destination="33g-8u-fRq" id="fpJ-Ig-FxP"/>
                         <outlet property="nextButton" destination="ozk-SW-Clc" id="Lkd-xQ-YR7"/>
@@ -183,22 +187,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjG-K8-dBs">
-                                <rect key="frame" x="32" y="192" width="350" height="40"/>
+                                <rect key="frame" x="165.5" y="112" width="83" height="156"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="yhn-vF-Xln"/>
+                                    <constraint firstAttribute="height" constant="156" id="yhn-vF-Xln"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adi-DA-qZd">
-                                <rect key="frame" x="149.5" y="635.5" width="115.5" height="46.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
                                         <color key="backgroundColor" red="0.26274509800000001" green="0.82745098039999998" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
-                                    <directionalEdgeInsets key="contentInsets" top="13" leading="40" bottom="13" trailing="40"/>
+                                    <directionalEdgeInsets key="contentInsets" top="11" leading="60" bottom="11" trailing="60"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -215,11 +219,10 @@
                         <viewLayoutGuide key="safeArea" id="PUT-iH-Gvq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PUT-iH-Gvq" firstAttribute="bottom" secondItem="adi-DA-qZd" secondAttribute="bottom" constant="180" id="6hV-Gd-lps"/>
-                            <constraint firstItem="PUT-iH-Gvq" firstAttribute="trailing" secondItem="kjG-K8-dBs" secondAttribute="trailing" constant="32" id="RlU-43-Ru9"/>
-                            <constraint firstItem="kjG-K8-dBs" firstAttribute="leading" secondItem="PUT-iH-Gvq" secondAttribute="leading" constant="32" id="YHJ-ac-O8K"/>
+                            <constraint firstItem="PUT-iH-Gvq" firstAttribute="bottom" secondItem="adi-DA-qZd" secondAttribute="bottom" constant="50" id="6hV-Gd-lps"/>
                             <constraint firstItem="adi-DA-qZd" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" id="gUc-xu-Cd1"/>
-                            <constraint firstItem="kjG-K8-dBs" firstAttribute="top" secondItem="PUT-iH-Gvq" secondAttribute="top" constant="100" id="tg8-Kn-4Ne"/>
+                            <constraint firstItem="kjG-K8-dBs" firstAttribute="top" secondItem="PUT-iH-Gvq" secondAttribute="top" constant="20" id="tg8-Kn-4Ne"/>
+                            <constraint firstItem="kjG-K8-dBs" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" id="uUa-jt-BjC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FZc-dv-BuE"/>
@@ -230,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GL4-8b-miW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2936" y="-35"/>
+            <point key="canvasLocation" x="2934.7826086956525" y="-35.491071428571423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uus-cY-5IC">
@@ -240,6 +243,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r8Z-74-Bll">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
