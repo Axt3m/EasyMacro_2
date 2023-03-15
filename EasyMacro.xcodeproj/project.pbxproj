@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		C60A1F4029BF28CB0061F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F3F29BF28CB0061F3BC /* AppDelegate.swift */; };
 		C60A1F4229BF28CB0061F3BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F4129BF28CB0061F3BC /* SceneDelegate.swift */; };
-		C60A1F4429BF28CB0061F3BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F4329BF28CB0061F3BC /* ViewController.swift */; };
+		C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F4329BF28CB0061F3BC /* WelcomeViewController.swift */; };
 		C60A1F4729BF28CB0061F3BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F4529BF28CB0061F3BC /* Main.storyboard */; };
 		C60A1F4929BF28CE0061F3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F4829BF28CE0061F3BC /* Assets.xcassets */; };
 		C60A1F4C29BF28CE0061F3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F4A29BF28CE0061F3BC /* LaunchScreen.storyboard */; };
+		C60A1F5429BF33D10061F3BC /* Pacifico.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5329BF33D10061F3BC /* Pacifico.ttf */; };
+		C60A1F5729BF357A0061F3BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F5629BF357A0061F3BC /* Constants.swift */; };
+		C60A1F5D29BF37F70061F3BC /* Jost-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */; };
+		C60A1F5E29BF37F70061F3BC /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */; };
+		C60A1F5F29BF37F70061F3BC /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */; };
+		C67D3DEB29C1BD8A00DECB3A /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C60A1F3C29BF28CB0061F3BC /* EasyMacro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMacro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A1F3F29BF28CB0061F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C60A1F4129BF28CB0061F3BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C60A1F4329BF28CB0061F3BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C60A1F4329BF28CB0061F3BC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C60A1F4629BF28CB0061F3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C60A1F4829BF28CE0061F3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60A1F4B29BF28CE0061F3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60A1F4D29BF28CE0061F3BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60A1F5329BF33D10061F3BC /* Pacifico.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pacifico.ttf; sourceTree = "<group>"; };
+		C60A1F5629BF357A0061F3BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Bold.ttf"; sourceTree = "<group>"; };
+		C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
+		C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
+		C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +70,43 @@
 			children = (
 				C60A1F3F29BF28CB0061F3BC /* AppDelegate.swift */,
 				C60A1F4129BF28CB0061F3BC /* SceneDelegate.swift */,
-				C60A1F4329BF28CB0061F3BC /* ViewController.swift */,
-				C60A1F4529BF28CB0061F3BC /* Main.storyboard */,
+				C60A1F5929BF36110061F3BC /* Views */,
+				C60A1F5829BF35FD0061F3BC /* Controllers */,
 				C60A1F4829BF28CE0061F3BC /* Assets.xcassets */,
 				C60A1F4A29BF28CE0061F3BC /* LaunchScreen.storyboard */,
 				C60A1F4D29BF28CE0061F3BC /* Info.plist */,
+				C60A1F5629BF357A0061F3BC /* Constants.swift */,
+				C60A1F5529BF33DB0061F3BC /* Fonts */,
 			);
 			path = EasyMacro;
+			sourceTree = "<group>";
+		};
+		C60A1F5529BF33DB0061F3BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C60A1F5329BF33D10061F3BC /* Pacifico.ttf */,
+				C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */,
+				C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */,
+				C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C60A1F5829BF35FD0061F3BC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C60A1F4329BF28CB0061F3BC /* WelcomeViewController.swift */,
+				C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C60A1F5929BF36110061F3BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C60A1F4529BF28CB0061F3BC /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +169,11 @@
 			files = (
 				C60A1F4C29BF28CE0061F3BC /* LaunchScreen.storyboard in Resources */,
 				C60A1F4929BF28CE0061F3BC /* Assets.xcassets in Resources */,
+				C60A1F5D29BF37F70061F3BC /* Jost-Bold.ttf in Resources */,
+				C60A1F5E29BF37F70061F3BC /* Jost-Light.ttf in Resources */,
+				C60A1F5429BF33D10061F3BC /* Pacifico.ttf in Resources */,
 				C60A1F4729BF28CB0061F3BC /* Main.storyboard in Resources */,
+				C60A1F5F29BF37F70061F3BC /* Jost-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C60A1F4429BF28CB0061F3BC /* ViewController.swift in Sources */,
+				C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */,
+				C60A1F5729BF357A0061F3BC /* Constants.swift in Sources */,
 				C60A1F4029BF28CB0061F3BC /* AppDelegate.swift in Sources */,
 				C60A1F4229BF28CB0061F3BC /* SceneDelegate.swift in Sources */,
+				C67D3DEB29C1BD8A00DECB3A /* WeightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
