@@ -33,13 +33,15 @@ struct Visual {
         
     }
     
-    static func buttonAnswer(to button: UIButton, text textInput: String, selected userSelected: Bool) {
-        if userSelected == true {
-            button.layer.borderColor = UIColor.red.cgColor
-        } else {
-            button.backgroundColor = UIColor.white
-        }
+    static func customButton(to button: UIButton, text textInput: String, font fontInput: String? = nil, size sizeInput: Int? = nil) {
+        
+        button.setAttributedTitle(NSAttributedString(string: textInput, attributes: [NSAttributedString.Key.font: UIFont(name: fontInput ?? K.answerPolice, size: CGFloat(sizeInput ?? 18))!]), for: .normal)
+        button.titleLabel?.numberOfLines = 0
+        button.contentHorizontalAlignment = .center
+        
+        
     }
+
     
     static func selectedButton(_ b1: UIButton) {
 

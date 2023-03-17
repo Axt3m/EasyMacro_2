@@ -47,7 +47,7 @@ struct K {
     
     static let activityAnswer1 = "Endurance"
     static let activityAnswer2 = "Strength & Power"
-    static let activityAnswer3 = "Mixed Intermittent sports"
+    static let activityAnswer3 = "Mixed Intermittent sports bla"
     static let activityAnswer4 = "Elite"
     static let activityAnswer5 = "I do not exercise"
     
@@ -55,7 +55,7 @@ struct K {
     static let goalsAnswer2 = "Moderate deficit"
     static let goalsAnswer3 = "Large deficit"
     
-    static let answerPolice = "Jost-SemiBold"
+    static let answerPolice = "Jost-Light"
     
     
     //MARK: - Common constants

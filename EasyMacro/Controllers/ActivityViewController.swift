@@ -23,8 +23,10 @@ class ActivityViewController: UIViewController {
         Visual.customLabel(to: question2Label, text: K.activityQuestion, font: K.questionPolice, size: 24)
         Visual.buttonShadowAndFont(to: nextButton)
         
-        
-        button1.setTitle(K.activityAnswer1, for: .normal)
+        Visual.customButton(to: button1, text: K.activityAnswer1)
+        Visual.customButton(to: button2, text: K.activityAnswer2)
+        Visual.customButton(to: button3, text: K.activityAnswer3)
+        Visual.customButton(to: button4, text: K.activityAnswer4)
         
     }
     
@@ -37,10 +39,6 @@ class ActivityViewController: UIViewController {
 
         Visual.selectedButton(sender)
         Visual.deselectButtons(button2, button3, button4)
-        print(button1.isSelected)
-        print(button2.isSelected)
-        print(button3.isSelected)
-        print(button4.isSelected)
         
         
     }
@@ -49,38 +47,25 @@ class ActivityViewController: UIViewController {
         
         Visual.selectedButton(sender)
         Visual.deselectButtons(button1, button3, button4)
-        print(button1.isSelected)
-        print(button2.isSelected)
-        print(button3.isSelected)
-        print(button4.isSelected)
-        print("---")
+  
     }
 
     @IBAction func button3Pressed(_ sender: UIButton) {
         Visual.selectedButton(sender)
         Visual.deselectButtons(button1, button2, button4)
-        print(button1.isSelected)
-        print(button2.isSelected)
-        print(button3.isSelected)
-        print(button4.isSelected)
-        print("---")
+
     }
 
     @IBAction func button4Pressed(_ sender: UIButton) {
         Visual.selectedButton(sender)
         Visual.deselectButtons(button1, button2, button3)
-        print(button1.isSelected)
-        print(button2.isSelected)
-        print(button3.isSelected)
-        print(button4.isSelected)
-        print("---")
+
     }
     
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-        
-        //sender.backgroundColor = sender.backgroundColor == UIColor.red ? UIColor.black : UIColor.red
+
     }
     
 
