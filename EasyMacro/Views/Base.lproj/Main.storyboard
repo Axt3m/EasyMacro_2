@@ -217,32 +217,36 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="sLu-Fe-oMl"/>
                                     <constraint firstAttribute="height" constant="122" id="u8S-gY-jwG"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button3" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="Button3" cornerStyle="medium">
                                     <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button3Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="2dS-7q-NKq"/>
+                                    <action selector="button3Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="rat-17-KhR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iur-un-MH4">
                                 <rect key="frame" x="24" y="322" width="176" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="1"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="ZSt-nV-Pgt"/>
                                     <constraint firstAttribute="height" constant="122" id="d32-ge-fja"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button1" cornerStyle="medium">
-                                    <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Button1" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
                                         <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
@@ -259,11 +263,11 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="0ux-UL-KyD"/>
                                     <constraint firstAttribute="height" constant="122" id="9me-6z-BDW"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button4" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="Button4" cornerStyle="medium">
                                     <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
@@ -280,11 +284,11 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="mFH-Gx-vih"/>
                                     <constraint firstAttribute="height" constant="122" id="n6e-9u-tt4"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button2" cornerStyle="medium">
+                                <buttonConfiguration key="configuration" style="plain" title="Button2" cornerStyle="medium">
                                     <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
@@ -316,7 +320,7 @@
                     <connections>
                         <outlet property="button1" destination="iur-un-MH4" id="n6H-Vj-pda"/>
                         <outlet property="button2" destination="f1t-Zh-lR1" id="HMD-2h-T4H"/>
-                        <outlet property="button3" destination="WiJ-al-Hhw" id="0vp-JM-Xu2"/>
+                        <outlet property="button3" destination="WiJ-al-Hhw" id="Dqs-os-ECT"/>
                         <outlet property="button4" destination="UGM-zo-agI" id="jdl-BD-9lt"/>
                         <outlet property="nextButton" destination="adi-DA-qZd" id="q47-EJ-OPo"/>
                         <outlet property="question2Label" destination="kjG-K8-dBs" id="maC-bk-Oej"/>

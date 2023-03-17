@@ -40,4 +40,28 @@ struct Visual {
             button.backgroundColor = UIColor.white
         }
     }
+    
+    static func selectedButton(_ b1: UIButton) {
+
+        b1.isSelected = true
+        b1.layer.borderColor = UIColor(red: 247.0/255.0, green: 226.0/255.0, blue: 159.0/255.0, alpha: 1).cgColor
+        b1.layer.borderWidth = 2
+        b1.layer.cornerRadius = 21
+        b1.backgroundColor = UIColor(red: 252.0/255.0, green: 246.0/255.0, blue: 212.0/255.0, alpha: 1)
+
+    }
+    
+    static func deselectButtons(_ b1: UIButton, _ b2: UIButton? = nil, _ b3: UIButton? = nil, _ b4: UIButton? = nil, _ b5: UIButton? = nil, _ b6: UIButton? = nil) {
+        
+        let buttonsArray = [b1, b2, b3, b4, b5, b6]
+        
+        for i in 0..<buttonsArray.count {
+            buttonsArray[i]?.isSelected = false
+            buttonsArray[i]?.layer.borderColor = UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1).cgColor
+            buttonsArray[i]?.layer.borderWidth = 2
+            buttonsArray[i]?.layer.cornerRadius = 21
+            buttonsArray[i]?.backgroundColor = UIColor.white
+
+        }
+    }
 }

@@ -16,10 +16,6 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
     
-    var button1Selected: Bool = false
-    var button2Selected: Bool = false
-    var button3Selected: Bool = false
-    var button4Selected: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,28 +23,57 @@ class ActivityViewController: UIViewController {
         Visual.customLabel(to: question2Label, text: K.activityQuestion, font: K.questionPolice, size: 24)
         Visual.buttonShadowAndFont(to: nextButton)
         
-        button1.titleLabel?.text = K.activityAnswer1
-        button2.titleLabel?.text = K.activityAnswer2
-        button3.titleLabel?.text = K.activityAnswer3
-        button4.titleLabel?.text = K.activityAnswer4
+        
+        button1.setTitle(K.activityAnswer1, for: .normal)
         
     }
     
     
     @IBAction func button1Pressed(_ sender: UIButton) {
-//        button1Selected = true
-//        Visual.buttonAnswer(to: sender, text: "Endurance", selected: button1Selected)
-        //sender.backgroundColor = UIColor.red
+        
+        button1.layer.borderColor = UIColor.red.cgColor
+        button1.layer.borderWidth = 2
+        button1.layer.cornerRadius = 21
+
+        Visual.selectedButton(sender)
+        Visual.deselectButtons(button2, button3, button4)
+        print(button1.isSelected)
+        print(button2.isSelected)
+        print(button3.isSelected)
+        print(button4.isSelected)
+        
         
     }
 
     @IBAction func button2Pressed(_ sender: UIButton) {
+        
+        Visual.selectedButton(sender)
+        Visual.deselectButtons(button1, button3, button4)
+        print(button1.isSelected)
+        print(button2.isSelected)
+        print(button3.isSelected)
+        print(button4.isSelected)
+        print("---")
     }
 
-    @IBAction func button3Pressed(_ sender: Any) {
+    @IBAction func button3Pressed(_ sender: UIButton) {
+        Visual.selectedButton(sender)
+        Visual.deselectButtons(button1, button2, button4)
+        print(button1.isSelected)
+        print(button2.isSelected)
+        print(button3.isSelected)
+        print(button4.isSelected)
+        print("---")
     }
 
-    @IBAction func button4Pressed(_ sender: Any) {
+    @IBAction func button4Pressed(_ sender: UIButton) {
+        Visual.selectedButton(sender)
+        Visual.deselectButtons(button1, button2, button3)
+        print(button1.isSelected)
+        print(button2.isSelected)
+        print(button3.isSelected)
+        print(button4.isSelected)
+        print("---")
     }
     
     
