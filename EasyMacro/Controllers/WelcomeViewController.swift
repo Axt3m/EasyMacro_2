@@ -16,19 +16,20 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Visual.customLabel(to: welcomeLabel, text: K.welcomeTitle, font: K.welcomeTitlePolice, size: 25)
         Visual.customLabel(to: descriptionLabel1, text: K.welcomeText1, font: K.welcomeTextPolice1, size: 18)
         Visual.customLabel(to: descriptionLabel2, text: K.welcomeText2, font: K.welcomeTextPolice2, size: 15)
-        Visual.buttonShadowAndFont(to: startButton)
+        Visual.buttonShadowAndFont(to: startButton, text: K.welcomeButtonTitle)
 
     }
     
     
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: startButton)
+        Visual.buttonShadowAndFont(to: startButton, text: K.welcomeButtonTitle)
     }
     
 

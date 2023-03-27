@@ -16,6 +16,8 @@ class WeightViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var kgLabel: UILabel!
     
+    public var userWeight: Int = K.defaultWeight
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +26,21 @@ class WeightViewController: UIViewController {
         weightPicker.delegate = self
         weightPicker.selectRow(K.defaultWeight - K.minWeight, inComponent: 0, animated: true)
         
-        Visual.customLabel(to: question1Label, text: K.weightQuestion, font: K.questionPolice, size: 24)
-        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 20)
+        
+        Visual.customLabel(to: question1Label, text: K.weightQuestion, font: K.questionPolice, size: 25)
+        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 18)
         Visual.buttonShadowAndFont(to: nextButton)
+        
+
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
+        print("The user has selected \(userWeight)kg")
+        
     }
+    
+
     
 }
 
@@ -49,6 +58,10 @@ extension WeightViewController: UIPickerViewDataSource {
 extension WeightViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(K.minWeight + row)"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        userWeight = row + K.minWeight
     }
     
 }
