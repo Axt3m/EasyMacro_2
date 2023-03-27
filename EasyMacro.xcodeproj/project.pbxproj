@@ -18,8 +18,9 @@
 		C60A1F5D29BF37F70061F3BC /* Jost-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */; };
 		C60A1F5E29BF37F70061F3BC /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */; };
 		C60A1F5F29BF37F70061F3BC /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */; };
+		C665CD8A29D199E30050CD57 /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8929D199E30050CD57 /* SportsViewController.swift */; };
 		C67D3DEB29C1BD8A00DECB3A /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */; };
-		C682DBF729C1EC7700B41A0E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF629C1EC7700B41A0E /* ActivityViewController.swift */; };
+		C682DBF729C1EC7700B41A0E /* ActivityLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF629C1EC7700B41A0E /* ActivityLevelViewController.swift */; };
 		C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF829C1FE3500B41A0E /* Visual.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +38,9 @@
 		C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Bold.ttf"; sourceTree = "<group>"; };
 		C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
 		C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
+		C665CD8929D199E30050CD57 /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
-		C682DBF629C1EC7700B41A0E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		C682DBF629C1EC7700B41A0E /* ActivityLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelViewController.swift; sourceTree = "<group>"; };
 		C682DBF829C1FE3500B41A0E /* Visual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visual.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +104,8 @@
 			children = (
 				C60A1F4329BF28CB0061F3BC /* WelcomeViewController.swift */,
 				C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */,
-				C682DBF629C1EC7700B41A0E /* ActivityViewController.swift */,
+				C682DBF629C1EC7700B41A0E /* ActivityLevelViewController.swift */,
+				C665CD8929D199E30050CD57 /* SportsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,11 +203,12 @@
 			files = (
 				C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */,
 				C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */,
-				C682DBF729C1EC7700B41A0E /* ActivityViewController.swift in Sources */,
+				C682DBF729C1EC7700B41A0E /* ActivityLevelViewController.swift in Sources */,
 				C60A1F5729BF357A0061F3BC /* Constants.swift in Sources */,
 				C60A1F4029BF28CB0061F3BC /* AppDelegate.swift in Sources */,
 				C60A1F4229BF28CB0061F3BC /* SceneDelegate.swift in Sources */,
 				C67D3DEB29C1BD8A00DECB3A /* WeightViewController.swift in Sources */,
+				C665CD8A29D199E30050CD57 /* SportsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

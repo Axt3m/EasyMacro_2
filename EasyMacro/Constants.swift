@@ -40,16 +40,16 @@ struct K {
     
     //MARK: - Answers
     
-    static let weightAnswer1 = "Exercises sometimes & normal activity"
-    static let weightAnswer2 = "1h of exercise, 3-5 times per week"
-    static let weightAnswer3 = "2-3h of exercise, 4-5 times per week"
-    static let weightAnswer4 = "Extreme competitive athlete"
+    static let activityAnswer1 = "Normal activity"
+    static let activityAnswer2 = "1h of exercise, \n3-5 times per week"
+    static let activityAnswer3 = "2-3h of exercise, \n4-5 times per week"
+    static let activityAnswer4 = "Extreme \ncompetitive athlete"
     
-    static let activityAnswer1 = "Endurance"
-    static let activityAnswer2 = "Strength & Power"
-    static let activityAnswer3 = "Mixed Intermittent sports bla"
-    static let activityAnswer4 = "Elite"
-    static let activityAnswer5 = "I do not exercise"
+    static let sportType1 = "Endurance"
+    static let sportType2 = "Strength & Power"
+    static let sportType3 = "Mixed \nIntermittent sports"
+    static let sportType4 = "Elite"
+    static let sportType5 = "I do not exercise \nany sports"
     
     static let goalsAnswer1 = "Small deficit"
     static let goalsAnswer2 = "Moderate deficit"
