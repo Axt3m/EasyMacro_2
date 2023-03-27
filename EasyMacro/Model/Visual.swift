@@ -47,28 +47,34 @@ struct Visual {
     }
     
 
-    static func selectedButton(_ b1: UIButton) {
+    static func selectedButton(_ b1: UIButton, completion: ((String) -> Void)? = nil) {
         
         b1.isSelected = true
         b1.layer.borderColor = UIColor(red: 247.0/255.0, green: 226.0/255.0, blue: 159.0/255.0, alpha: 1).cgColor
         b1.layer.borderWidth = 2
         b1.layer.cornerRadius = 21
         b1.backgroundColor = UIColor(red: 252.0/255.0, green: 246.0/255.0, blue: 212.0/255.0, alpha: 1)
-
-    }
-    
-    static func selectedButtonText(_ b1: UIButton) -> String {
-        let currentText: String
         
-        if let isText = b1.titleLabel?.text {
-            currentText = isText
-            print("The user has selected \(currentText)")
-        } else {
+        guard let currentTextButton = b1.titleLabel?.text else {
             fatalError("The button has no text.")
         }
         
-        return currentText
+        completion?(currentTextButton)
+
     }
+    
+//    static func selectedButtonText(_ b1: UIButton) -> String {
+//        let currentText: String
+//
+//        if let isText = b1.titleLabel?.text {
+//            currentText = isText
+//            print("The user has selected \(currentText)")
+//        } else {
+//            fatalError("The button has no text.")
+//        }
+//
+//        return currentText
+//    }
     
     static func deselectButtons(_ b1: UIButton, _ b2: UIButton? = nil, _ b3: UIButton? = nil, _ b4: UIButton? = nil, _ b5: UIButton? = nil, _ b6: UIButton? = nil) {
         

@@ -15,7 +15,6 @@ struct K {
     static let welcomeTitle = "Welcome to EasyMacro"
     static let welcomeText1 = "A quick and personalized questionnaire that will give you a tailored set of macros and help you achieve your health and fitness goals."
     static let welcomeText2 = "Let's begin this journey towards \na healthier and happier you !"
-    static let welcomeButtonTitle = "Get Started"
     
     static let welcomeTitlePolice = "Pacifico"
     static let welcomeTextPolice1 = "Jost-Light"
@@ -25,6 +24,7 @@ struct K {
     
     static let weightQuestion = "What is your \ncurrent weight ?"
     static let activityQuestion = "What is your \nactivity level ?"
+    static let sportQuestion = "What kind of sports \ndo you exercise ?"
     static let goalsQuestion = "What are \nyour goals ?"
     
     static let questionPolice = "Jost-SemiBold"
@@ -58,9 +58,11 @@ struct K {
     static let answerPolice = "Jost-Light"
     
     
-    //MARK: - Common constants
+    //MARK: - Other constants
     
+    static let welcomeButtonTitle = "Get Started"
     static let nextButtonTitle = "Next"
+    static let calculateButtonTitle = "Calculate"
     static let nextButtonPolice = "Jost-Bold"
     
     static let nextButtonColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
