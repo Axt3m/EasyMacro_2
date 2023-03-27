@@ -379,9 +379,12 @@
                                     <directionalEdgeInsets key="contentInsets" top="11" leading="60" bottom="11" trailing="60"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="mpo-0d-PbA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-EF-yWK">
-                                <rect key="frame" x="24" y="462" width="176" height="122"/>
+                                <rect key="frame" x="24" y="427" width="176" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="9T1-vI-Rpx"/>
@@ -397,9 +400,12 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="button3Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="KHG-rW-g7G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sV-0Y-m2w">
-                                <rect key="frame" x="24" y="322" width="176" height="122"/>
+                                <rect key="frame" x="24" y="287" width="176" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" label="1"/>
                                 <constraints>
@@ -419,9 +425,12 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="button1Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="bDm-Yh-Kxe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6f-Rd-zV0">
-                                <rect key="frame" x="214" y="462" width="176" height="122"/>
+                                <rect key="frame" x="214" y="427" width="176" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="122" id="knr-tq-TAv"/>
@@ -437,9 +446,12 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="button4Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="QAV-tz-zyF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx6-7h-8Ig">
-                                <rect key="frame" x="214" y="322" width="176" height="122"/>
+                                <rect key="frame" x="214" y="287" width="176" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="cKh-Cq-r5c"/>
@@ -455,19 +467,45 @@
                                     <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="button2Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="Em7-rg-faq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2G-G4-JoG">
+                                <rect key="frame" x="119" y="567" width="176" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="4Zg-EF-mHD"/>
+                                    <constraint firstAttribute="height" constant="122" id="5x0-eI-wpo"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button5" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
+                                        <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button5Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="WT9-Cm-dZf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qib-dD-Ukf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="t6f-Rd-zV0" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="75" id="6ag-5p-F3b"/>
+                            <constraint firstItem="t6f-Rd-zV0" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="40" id="6ag-5p-F3b"/>
                             <constraint firstItem="t6f-Rd-zV0" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" constant="95" id="Ayl-qD-6SS"/>
                             <constraint firstItem="8rC-zm-68Q" firstAttribute="top" secondItem="qib-dD-Ukf" secondAttribute="top" constant="20" id="BPR-G7-ofD"/>
-                            <constraint firstItem="Sx6-7h-8Ig" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="-65" id="LCP-qL-pvf"/>
-                            <constraint firstItem="6sV-0Y-m2w" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="-65" id="Uzf-5n-hfe"/>
+                            <constraint firstItem="Sx6-7h-8Ig" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="-100" id="LCP-qL-pvf"/>
+                            <constraint firstItem="J2G-G4-JoG" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="180" id="TTt-JS-k0c"/>
+                            <constraint firstItem="6sV-0Y-m2w" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="-100" id="Uzf-5n-hfe"/>
+                            <constraint firstItem="J2G-G4-JoG" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="k1i-SG-AuI"/>
                             <constraint firstItem="6sV-0Y-m2w" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" constant="-95" id="kYq-ER-0uz"/>
                             <constraint firstItem="8rC-zm-68Q" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="lxy-vU-tG0"/>
-                            <constraint firstItem="NGI-EF-yWK" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="75" id="ndD-PZ-eaM"/>
+                            <constraint firstItem="NGI-EF-yWK" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="40" id="ndD-PZ-eaM"/>
                             <constraint firstItem="HwX-x8-ZxN" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="opX-cR-yeE"/>
                             <constraint firstItem="NGI-EF-yWK" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" constant="-95" id="pSZ-Yl-lrk"/>
                             <constraint firstItem="qib-dD-Ukf" firstAttribute="bottom" secondItem="HwX-x8-ZxN" secondAttribute="bottom" constant="50" id="u52-7o-RIy"/>
@@ -475,6 +513,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ea9-Cs-INX"/>
+                    <connections>
+                        <outlet property="button1" destination="6sV-0Y-m2w" id="LNI-ev-yUd"/>
+                        <outlet property="button2" destination="Sx6-7h-8Ig" id="AQP-fi-51D"/>
+                        <outlet property="button3" destination="NGI-EF-yWK" id="gtH-CQ-4rd"/>
+                        <outlet property="button4" destination="t6f-Rd-zV0" id="YMu-d5-sSr"/>
+                        <outlet property="button5" destination="J2G-G4-JoG" id="jUs-v4-cd6"/>
+                        <outlet property="nextButton" destination="HwX-x8-ZxN" id="gzo-6Q-o15"/>
+                        <outlet property="question3Label" destination="8rC-zm-68Q" id="I8c-O9-hVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnC-TP-f5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

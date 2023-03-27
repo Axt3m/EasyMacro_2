@@ -25,6 +25,7 @@ struct K {
     
     static let weightQuestion = "What is your \ncurrent weight ?"
     static let activityQuestion = "What is your \nactivity level ?"
+    static let sportQuestion = "What kind of sports \ndo you exercise ?"
     static let goalsQuestion = "What are \nyour goals ?"
     
     static let questionPolice = "Jost-SemiBold"
