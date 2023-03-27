@@ -9,23 +9,23 @@ import UIKit
 
 class ActivityLevelViewController: UIViewController {
     
-    @IBOutlet weak var question2Label: UILabel!
+    @IBOutlet weak var question3Label: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
     
-    private var userActivityChoice: String = ""
+    public var userActivityLevel: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Visual.customLabel(to: question2Label, text: K.activityQuestion, font: K.questionPolice, size: 24)
+        Visual.customLabel(to: question3Label, text: K.activityQuestion, font: K.questionPolice, size: 24)
         Visual.buttonShadowAndFont(to: nextButton)
 
         Visual.customButton(to: button1, text: K.activityAnswer1, isDefaultButton: true) {defaultTextButton in
-            self.userActivityChoice = defaultTextButton
+            self.userActivityLevel = defaultTextButton
         }
         
         Visual.customButton(to: button2, text: K.activityAnswer2)
@@ -38,7 +38,7 @@ class ActivityLevelViewController: UIViewController {
     @IBAction func button1Pressed(_ sender: UIButton) {
 
         Visual.selectedButton(sender) {textButton in
-            self.userActivityChoice = textButton
+            self.userActivityLevel = textButton
         }
         
         Visual.deselectButtons(button2, button3, button4)
@@ -48,7 +48,7 @@ class ActivityLevelViewController: UIViewController {
     @IBAction func button2Pressed(_ sender: UIButton) {
         
         Visual.selectedButton(sender) {textButton in
-            self.userActivityChoice = textButton
+            self.userActivityLevel = textButton
         }
         
         Visual.deselectButtons(button1, button3, button4)
@@ -57,7 +57,7 @@ class ActivityLevelViewController: UIViewController {
 
     @IBAction func button3Pressed(_ sender: UIButton) {
         Visual.selectedButton(sender) {textButton in
-            self.userActivityChoice = textButton
+            self.userActivityLevel = textButton
         }
         
         Visual.deselectButtons(button1, button2, button4)
@@ -66,7 +66,7 @@ class ActivityLevelViewController: UIViewController {
 
     @IBAction func button4Pressed(_ sender: UIButton) {
         Visual.selectedButton(sender) {textButton in
-            self.userActivityChoice = textButton
+            self.userActivityLevel = textButton
         }
         Visual.deselectButtons(button1, button2, button3)
     }
@@ -74,7 +74,7 @@ class ActivityLevelViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-        print("The user chose \(userActivityChoice)")
+        UserChoices.sharedInstance.userActivityLevel = userActivityLevel
 
     }
     

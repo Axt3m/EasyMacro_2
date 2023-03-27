@@ -35,7 +35,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zfs-us-2Hw"/>
-                                    <segue destination="kLy-g8-B0l" kind="show" id="gxf-Rk-7dm"/>
+                                    <segue destination="W1O-nk-MSW" kind="show" id="29b-BU-MIp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="welcomeLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWR-FF-4ka">
@@ -102,6 +102,112 @@
             </objects>
             <point key="canvasLocation" x="1040.5797101449275" y="-34.821428571428569"/>
         </scene>
+        <!--Gender View Controller-->
+        <scene sceneID="uS5-k1-Q0l">
+            <objects>
+                <viewController id="W1O-nk-MSW" customClass="GenderViewController" customModule="EasyMacro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TEm-nc-UnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nd-Q2-YO7">
+                                <rect key="frame" x="165.5" y="112" width="83" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="lVy-XV-gvv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHN-AG-h5f">
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="0.0">
+                                        <color key="backgroundColor" red="0.26274509800000001" green="0.82745098039999998" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <directionalEdgeInsets key="contentInsets" top="11" leading="60" bottom="11" trailing="60"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="R9Q-Qx-dsN"/>
+                                    <segue destination="kLy-g8-B0l" kind="show" id="FpC-z4-XOK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgV-30-9SM">
+                                <rect key="frame" x="24" y="387" width="176" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="0Ah-X7-mWI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="teH-Me-eYN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Button1" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button1Pressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="gbn-2a-oQh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9o-S1-kdx">
+                                <rect key="frame" x="214" y="387" width="176" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="mTj-81-omc"/>
+                                    <constraint firstAttribute="height" constant="122" id="wHZ-ME-1Cg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button2" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
+                                        <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button2Pressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="83v-Yh-5Z7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JJl-TI-WgF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O9o-S1-kdx" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" constant="95" id="7N4-8A-yoU"/>
+                            <constraint firstItem="LgV-30-9SM" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" constant="-95" id="8IR-Cr-UiU"/>
+                            <constraint firstItem="4nd-Q2-YO7" firstAttribute="top" secondItem="JJl-TI-WgF" secondAttribute="top" constant="20" id="Ef5-oE-1xF"/>
+                            <constraint firstItem="O9o-S1-kdx" firstAttribute="centerY" secondItem="TEm-nc-UnQ" secondAttribute="centerY" id="Ged-R0-i4u"/>
+                            <constraint firstItem="LgV-30-9SM" firstAttribute="centerY" secondItem="TEm-nc-UnQ" secondAttribute="centerY" id="QYJ-nY-Yaf"/>
+                            <constraint firstItem="4nd-Q2-YO7" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" id="j39-ao-ehg"/>
+                            <constraint firstItem="JJl-TI-WgF" firstAttribute="bottom" secondItem="jHN-AG-h5f" secondAttribute="bottom" constant="50" id="jEm-bF-0bU"/>
+                            <constraint firstItem="jHN-AG-h5f" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" id="koT-he-qF1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PN5-BP-bpB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="scx-gO-Pj7"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="button1" destination="LgV-30-9SM" id="ify-ec-6bx"/>
+                        <outlet property="button2" destination="O9o-S1-kdx" id="Cs5-vn-3kK"/>
+                        <outlet property="nextButton" destination="jHN-AG-h5f" id="XFk-Qi-vrf"/>
+                        <outlet property="question1Label" destination="4nd-Q2-YO7" id="WhV-zv-cOo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vk-a1-0RK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010" y="-35"/>
+        </scene>
         <!--Weight View Controller-->
         <scene sceneID="DRp-Z9-tME">
             <objects>
@@ -143,7 +249,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-md-480">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsq-md-480">
                                 <rect key="frame" x="165.5" y="112" width="83" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="iyM-MW-nK5"/>
@@ -171,13 +277,13 @@
                     <connections>
                         <outlet property="kgLabel" destination="33g-8u-fRq" id="fpJ-Ig-FxP"/>
                         <outlet property="nextButton" destination="ozk-SW-Clc" id="Lkd-xQ-YR7"/>
-                        <outlet property="question1Label" destination="vsq-md-480" id="equ-Ak-3qe"/>
+                        <outlet property="question2Label" destination="vsq-md-480" id="equ-Ak-3qe"/>
                         <outlet property="weightPicker" destination="NhI-Rh-L5z" id="aUA-mt-GvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViH-4e-5lV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018.840579710145" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="3043" y="-35"/>
         </scene>
         <!--Activity Level View Controller-->
         <scene sceneID="hRr-uu-W9V">
@@ -187,7 +293,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjG-K8-dBs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjG-K8-dBs">
                                 <rect key="frame" x="165.5" y="112" width="83" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="yhn-vF-Xln"/>
@@ -197,7 +303,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adi-DA-qZd">
-                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -326,12 +432,12 @@
                         <outlet property="button3" destination="WiJ-al-Hhw" id="Dqs-os-ECT"/>
                         <outlet property="button4" destination="UGM-zo-agI" id="jdl-BD-9lt"/>
                         <outlet property="nextButton" destination="adi-DA-qZd" id="q47-EJ-OPo"/>
-                        <outlet property="question2Label" destination="kjG-K8-dBs" id="maC-bk-Oej"/>
+                        <outlet property="question3Label" destination="kjG-K8-dBs" id="maC-bk-Oej"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GL4-8b-miW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2934.7826086956525" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="4078" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uus-cY-5IC">
@@ -360,7 +466,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rC-zm-68Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rC-zm-68Q">
                                 <rect key="frame" x="165.5" y="112" width="83" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="sgB-c8-uZd"/>
@@ -370,7 +476,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwX-x8-ZxN">
-                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -523,12 +629,12 @@
                         <outlet property="button4" destination="t6f-Rd-zV0" id="YMu-d5-sSr"/>
                         <outlet property="button5" destination="J2G-G4-JoG" id="jUs-v4-cd6"/>
                         <outlet property="nextButton" destination="HwX-x8-ZxN" id="gzo-6Q-o15"/>
-                        <outlet property="question3Label" destination="8rC-zm-68Q" id="I8c-O9-hVn"/>
+                        <outlet property="question4Label" destination="8rC-zm-68Q" id="I8c-O9-hVn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnC-TP-f5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3823" y="-35"/>
+            <point key="canvasLocation" x="4941" y="-35"/>
         </scene>
         <!--Goals View Controller-->
         <scene sceneID="Pxk-qm-G8w">
@@ -538,7 +644,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkj-7i-Hc2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkj-7i-Hc2">
                                 <rect key="frame" x="165.5" y="112" width="83" height="156"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="156" id="IVE-AG-1WQ"/>
@@ -548,7 +654,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-mj-Wde">
-                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -650,12 +756,12 @@
                         <outlet property="button2" destination="cm6-nA-yy1" id="7e3-ZP-0XE"/>
                         <outlet property="button3" destination="5kP-dN-qDW" id="LQa-s6-Y8l"/>
                         <outlet property="nextButton" destination="7Ej-mj-Wde" id="3zs-vx-VOX"/>
-                        <outlet property="question4Label" destination="Fkj-7i-Hc2" id="Np7-eD-1ct"/>
+                        <outlet property="question5Label" destination="Fkj-7i-Hc2" id="Np7-eD-1ct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0H-Cg-1ax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4661" y="-35"/>
+            <point key="canvasLocation" x="5807" y="-35"/>
         </scene>
     </scenes>
     <resources>
