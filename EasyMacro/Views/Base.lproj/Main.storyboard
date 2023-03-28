@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHN-AG-h5f">
-                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -131,7 +131,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="R9Q-Qx-dsN"/>
-                                    <segue destination="kLy-g8-B0l" kind="show" id="FpC-z4-XOK"/>
+                                    <segue destination="kLy-g8-B0l" kind="show" identifier="genderToWeight" id="FpC-z4-XOK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgV-30-9SM">
@@ -228,7 +228,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="kLy-g8-B0l" eventType="touchUpInside" id="iI3-bS-9Ud"/>
-                                    <segue destination="1VM-Mv-p3z" kind="show" id="HNv-Bd-Rrx"/>
+                                    <segue destination="1VM-Mv-p3z" kind="show" identifier="weightToActivity" id="HNv-Bd-Rrx"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-Jb-uew">
@@ -303,7 +303,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adi-DA-qZd">
-                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -314,7 +314,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="fJN-Cd-rUZ"/>
-                                    <segue destination="r4O-mG-nhV" kind="show" id="VU2-72-9IZ"/>
+                                    <segue destination="r4O-mG-nhV" kind="show" identifier="activityToSport" id="VU2-72-9IZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WiJ-al-Hhw">
@@ -476,7 +476,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwX-x8-ZxN">
-                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -654,7 +654,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-mj-Wde">
-                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">

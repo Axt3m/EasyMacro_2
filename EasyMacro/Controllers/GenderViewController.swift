@@ -29,6 +29,13 @@ class GenderViewController: UIViewController {
         
         Visual.buttonShadowAndFont(to: nextButton)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(), name: Notification.name("text"), object: nil)
+        
+    }
+    
+    @objc func didGetNotification(_ notification: Notification) {
+        let text = notification.object as! String
+        label
     }
     
     @IBAction func button1Pressed(_ sender: UIButton) {
@@ -48,9 +55,9 @@ class GenderViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-        UserChoices.sharedInstance.userGender = userGender
-        
     }
+    
+
     
     
 }

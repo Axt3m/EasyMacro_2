@@ -73,7 +73,7 @@ class SportsViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-        UserChoices.sharedInstance.userSports = userSports
+ 
         
     }
     

@@ -74,9 +74,10 @@ class ActivityLevelViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-        UserChoices.sharedInstance.userActivityLevel = userActivityLevel
 
     }
+    
+
     
 
 }

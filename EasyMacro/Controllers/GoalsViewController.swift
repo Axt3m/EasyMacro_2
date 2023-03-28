@@ -58,13 +58,7 @@ class GoalsViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton, text: K.calculateButtonTitle)
-        UserChoices.sharedInstance.userGoals = userGoals
-        
-        var calories: Int = 0
-        var calculatorMacro = CalculatorMacro()
-        
-        calories = calculatorMacro.baselineCalories(gender: UserChoices.sharedInstance.userGender!, weight: UserChoices.sharedInstance.userWeight!)
-        print("The calories of the user needed is \(calories)")
+
         
     }
     

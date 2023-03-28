@@ -9,15 +9,10 @@ import UIKit
 
 class UserChoices {
     
-    static let sharedInstance = UserChoices()
-    
-    private init(){}
-    
-    var userGender: String?
-    var userWeight: Int?
-    var userActivityLevel: String?
-    var userSports: String?
-    var userGoals: String?
-    
+    var gender: String?
+    var weight: Int?
+    var activity: String?
+    var sport: String?
+    var goals: String?
     
 }
