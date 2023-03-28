@@ -71,38 +71,38 @@ struct K {
     
     static let nextButtonColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
     
-    //MARK: - Calculation constants
+    //MARK: - Multiplier constants
     
-    let caloriesMaleActivityAnswer1 = 14
-    let caloriesMaleActivityAnswer2 = 16
-    let caloriesMaleActivityAnswer3 = 18
-    let caloriesMaleActivityAnswer4 = 20
+    static let multiplierCaloriesMaleActivityAnswer1 = 14
+    static let multiplierCaloriesMaleActivityAnswer2 = 16
+    static let multiplierCaloriesMaleActivityAnswer3 = 18
+    static let multiplierCaloriesMaleActivityAnswer4 = 20
     
-    let caloriesFemaleActivityAnswer1 = 12
-    let caloriesFemaleActivityAnswer2 = 14
-    let caloriesFemaleActivityAnswer3 = 16
-    let caloriesFemaleActivityAnswer4 = 18
-    
-    
-    let proteinMaleSportAnswer1 = 1.15
-    let proteinMaleSportAnswer2 = 1.25
-    let proteinMaleSportAnswer3 = 1.25
-    let proteinMaleSportAnswer4 = 1.3
-    let proteinMaleSportAnswer5 = 0.7
-    
-    let proteinFemaleSportAnswer1 = 0.75
-    let proteinFemaleSportAnswer2 = 0.95
-    let proteinFemaleSportAnswer3 = 0.85
-    let proteinFemaleSportAnswer4 = 1.15
-    let proteinFemaleSportAnswer5 = 0.7
+    static let multiplierCaloriesFemaleActivityAnswer1 = 12
+    static let multiplierCaloriesFemaleActivityAnswer2 = 14
+    static let multiplierCaloriesFemaleActivityAnswer3 = 16
+    static let multiplierCaloriesFemaleActivityAnswer4 = 18
     
     
-    let deficitMaleGoalsAnswer1 = 0.15
-    let deficitMaleGoalsAnswer2 = 0.25
-    let deficitMaleGoalsAnswer3 = 0.3
+    static let proteinMaleSportAnswer1 = 1.15
+    static let proteinMaleSportAnswer2 = 1.25
+    static let proteinMaleSportAnswer3 = 1.25
+    static let proteinMaleSportAnswer4 = 1.3
+    static let proteinMaleSportAnswer5 = 0.7
     
-    let deficitFemaleGoalsAnswer1 = 0.1
-    let deficitFemaleGoalsAnswer2 = 0.2
-    let deficitFemaleGoalsAnswer3 = 0.25
+    static let proteinFemaleSportAnswer1 = 0.75
+    static let proteinFemaleSportAnswer2 = 0.95
+    static let proteinFemaleSportAnswer3 = 0.85
+    static let proteinFemaleSportAnswer4 = 1.15
+    static let proteinFemaleSportAnswer5 = 0.7
+    
+    
+    static let deficitMaleGoalsAnswer1 = 0.15
+    static let deficitMaleGoalsAnswer2 = 0.25
+    static let deficitMaleGoalsAnswer3 = 0.3
+    
+    static let deficitFemaleGoalsAnswer1 = 0.1
+    static let deficitFemaleGoalsAnswer2 = 0.2
+    static let deficitFemaleGoalsAnswer3 = 0.25
     
 }
