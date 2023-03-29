@@ -18,6 +18,10 @@ class ActivityLevelViewController: UIViewController {
     
     public var userActivityLevel: String = ""
     
+    var userChoices = UserChoices()
+    var gender: String?
+    var weight: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,6 +79,16 @@ class ActivityLevelViewController: UIViewController {
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "activityToSport" {
+            let sportVC = segue.destination as! SportsViewController
+            sportVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
+            sportVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
+            sportVC.activity = userChoices.getActivity(with: userActivityLevel)
+            
+        }
     }
     
 

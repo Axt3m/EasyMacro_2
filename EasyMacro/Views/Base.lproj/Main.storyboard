@@ -487,7 +487,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="mpo-0d-PbA"/>
-                                    <segue destination="0W3-Eq-82Q" kind="show" id="GpG-ye-Pyg"/>
+                                    <segue destination="0W3-Eq-82Q" kind="show" identifier="sportToGoals" id="GpG-ye-Pyg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGI-EF-yWK">
@@ -665,6 +665,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="pJN-Pj-LIu"/>
+                                    <segue destination="ORD-F5-j0c" kind="show" identifier="goalsToResult" id="tQi-rq-XpF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM7-2A-vJG">
@@ -762,6 +763,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z0H-Cg-1ax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5807" y="-35"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="Hb0-O7-bK1">
+            <objects>
+                <viewController id="ORD-F5-j0c" customClass="ResultsViewController" customModule="EasyMacro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVs-LZ-Bo9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZUt-3Y-H6U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eVu-oG-xD3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZQ-k9-kAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6693" y="-35"/>
         </scene>
     </scenes>
     <resources>

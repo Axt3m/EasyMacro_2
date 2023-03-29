@@ -20,6 +20,11 @@ class SportsViewController: UIViewController {
     
     public var userSports: String = ""
     
+    var userChoices = UserChoices()
+    var gender: String?
+    var weight: Int?
+    var activity: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -75,6 +80,17 @@ class SportsViewController: UIViewController {
         Visual.buttonShadowAndFont(to: nextButton)
  
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sportToGoals" {
+            let goalsVC = segue.destination as! GoalsViewController
+            goalsVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
+            goalsVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
+            goalsVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
+            goalsVC.sports = userChoices.getActivity(with: userSports)
+            
+        }
     }
     
     

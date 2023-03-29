@@ -18,6 +18,8 @@ class WeightViewController: UIViewController {
     
     public var userWeight: Int = K.defaultWeight
     
+    var userChoices = UserChoices()
+    var gender: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +38,23 @@ class WeightViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-
         
+        
+
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "weightToActivity" {
+            let activityVC = segue.destination as! ActivityLevelViewController
+            activityVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
+            activityVC.weight = userChoices.getWeight(with: userWeight)
+        }
+    }
+    
+
+    
+    
     
 
     

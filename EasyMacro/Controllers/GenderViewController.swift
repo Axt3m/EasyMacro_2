@@ -14,7 +14,9 @@ class GenderViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    public var userGender: String = ""
+    var userGender: String = ""
+    
+    var userChoices = UserChoices()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +30,6 @@ class GenderViewController: UIViewController {
         Visual.customButton(to: button2, text: K.genderFemale)
         
         Visual.buttonShadowAndFont(to: nextButton)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(), name: Notification.name("text"), object: nil)
-        
-    }
-    
-    @objc func didGetNotification(_ notification: Notification) {
-        let text = notification.object as! String
-        label
     }
     
     @IBAction func button1Pressed(_ sender: UIButton) {
@@ -55,6 +49,15 @@ class GenderViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
+
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "genderToWeight" {
+            let weightVC = segue.destination as! WeightViewController
+            weightVC.gender = userChoices.getGender(with: userGender)
+        }
     }
     
 
