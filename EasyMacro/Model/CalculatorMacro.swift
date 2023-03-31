@@ -11,56 +11,98 @@ struct CalculatorMacro {
     
     var userChoices: UserChoices
     
-    func userData() {
-        print("coucou \(userChoices.goals!)")
+    
+    
+    var totalCalories: Int = 0
+    var deficitCalories: Int = 0
+    var proteinAmount: Int = 0
+    var carbsAmount: Int = 0
+    var fatsAmount: Int = 0
+    
+    mutating func baselineCalories() -> Int {
+        let weightLbs = Int(Double(userChoices.weight!) * 2.2)
         
+        if userChoices.gender == K.genderMale {
+            if userChoices.activity == K.activityAnswer1 {
+                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer1
+            } else if userChoices.activity == K.activityAnswer2 {
+                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer2
+            } else if userChoices.activity == K.activityAnswer3 {
+                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer3
+            } else {
+                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer4
+            }
+        } else {
+            if userChoices.activity == K.activityAnswer1 {
+                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer1
+            } else if userChoices.activity == K.activityAnswer2 {
+                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer2
+            } else if userChoices.activity == K.activityAnswer3 {
+                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer3
+            } else {
+                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer4
+            }
+        }
+        
+        return totalCalories
     }
-
-    //    let gender = UserChoices.userGender
-    //
-    //
-    //
-    ////    guard let gender = UserChoices.sharedInstance.userGender else {
-    ////        print("coucou")
-    ////    }
-    ////
-    ////
-    ////    guard let weight = UserChoices.sharedInstance.userWeight else {fatalError("Error on weight: \(error)")}
-    ////    guard let activity = UserChoices.sharedInstance.userActivityLevel else {fatalError("Error on activity: \(error)")}
-    ////    guard let sport = UserChoices.sharedInstance.userSports else {fatalError("Error on sport: \(error)")}
-    //
-    //
-    //    var calories: Int = 0
-    //
-    //    mutating func baselineCalories() -> Int {
-    //        let weightLbs = Int(Double(weight) * 2.2)
-    //
-    //        if gender == K.genderMale {
-    //            if activity == K.activityAnswer1 {
-    //                calories = weightLbs * K.multiplierCaloriesMaleActivityAnswer1
-    //            } else if activity == K.activityAnswer2 {
-    //                calories = weightLbs * K.multiplierCaloriesMaleActivityAnswer2
-    //            } else if activity == K.activityAnswer3 {
-    //                calories = weightLbs * K.multiplierCaloriesMaleActivityAnswer3
-    //            } else {
-    //                calories = weightLbs * K.multiplierCaloriesMaleActivityAnswer4
-    //            }
-    //        } else {
-    //            if activity == K.activityAnswer1 {
-    //                calories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer1
-    //            } else if activity == K.activityAnswer2 {
-    //                calories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer2
-    //            } else if activity == K.activityAnswer3 {
-    //                calories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer3
-    //            } else {
-    //                calories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer4
-    //            }
-    //        }
-    //
-    //        return calories
-    //    }
-    //
-    //    func deficit
+    
+    
+    mutating func caloriesWithDeficit() -> Int {
+        totalCalories = baselineCalories()
+        
+        if userChoices.gender == K.genderMale {
+            if userChoices.goals == K.goalsAnswer1 {
+                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitMaleGoalsAnswer1))
+            } else if userChoices.goals == K.goalsAnswer2 {
+                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitMaleGoalsAnswer2))
+            } else {
+                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitMaleGoalsAnswer3))
+            }
+        } else {
+            if userChoices.goals == K.goalsAnswer1 {
+                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitFemaleGoalsAnswer1))
+            } else if userChoices.goals == K.goalsAnswer2 {
+                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitFemaleGoalsAnswer2))
+            } else {
+                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitFemaleGoalsAnswer3))
+            }
+        }
+        
+        return deficitCalories
+    }
+    
+    mutating func proteinRequirement() -> Int {
+        let weightLbs = Int(Double(userChoices.weight!) * 2.2)
+        
+        if userChoices.gender == K.genderMale {
+            if userChoices.sport == K.sportAnswer1{
+                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer1)
+            } else if userChoices.sport == K.sportAnswer2{
+                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer2)
+            } else if userChoices.sport == K.sportAnswer3{
+                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer3)
+            } else if userChoices.sport == K.sportAnswer4{
+                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer4)
+            } else {
+                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer5)
+            }
+        } else {
+            if userChoices.sport == K.sportAnswer1{
+                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer1)
+            } else if userChoices.sport == K.sportAnswer2{
+                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer2)
+            } else if userChoices.sport == K.sportAnswer3{
+                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer3)
+            } else if userChoices.sport == K.sportAnswer4{
+                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer4)
+            } else {
+                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer5)
+            }
+        }
+        
+        return proteinAmount
+    }
 
 
     

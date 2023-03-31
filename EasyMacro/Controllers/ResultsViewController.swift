@@ -28,7 +28,9 @@ class ResultsViewController: UIViewController {
         
         var calculatorMacro = CalculatorMacro(userChoices: UserChoices(gender: gender, weight: weight, activity: activity, sport: sports, goals: goals))
         
-        calculatorMacro.userData()
+        print(calculatorMacro.baselineCalories())
+        print(calculatorMacro.caloriesWithDeficit())
+        print(calculatorMacro.proteinRequirement())
     }
     
 }
