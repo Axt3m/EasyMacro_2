@@ -14,6 +14,7 @@ struct UserChoices {
     var activity: String?
     var sport: String?
     var goals: String?
+    var preferences: String?
     
     mutating func getGender(with userGender: String) -> String {
         self.gender = userGender
@@ -38,6 +39,11 @@ struct UserChoices {
     mutating func getGoals(with userGoals: String) -> String {
         self.goals = userGoals
         return Test.unwrapOptionalString(goals)
+    }
+    
+    mutating func getPreferences(with userPreferences: String) -> String {
+        self.preferences = userPreferences
+        return Test.unwrapOptionalString(preferences)
     }
     
     

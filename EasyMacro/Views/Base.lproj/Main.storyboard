@@ -180,27 +180,37 @@
                                     <action selector="button2Pressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="83v-Yh-5Z7"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4bP-XA-O7m">
+                                <rect key="frame" x="129" y="92" width="156" height="4"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.89453063407057298" green="0.89453063407057298" blue="0.89453063407057298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JJl-TI-WgF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O9o-S1-kdx" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" constant="95" id="7N4-8A-yoU"/>
                             <constraint firstItem="LgV-30-9SM" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" constant="-95" id="8IR-Cr-UiU"/>
+                            <constraint firstItem="4bP-XA-O7m" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" id="AwU-gC-QqN"/>
                             <constraint firstItem="4nd-Q2-YO7" firstAttribute="top" secondItem="JJl-TI-WgF" secondAttribute="top" constant="20" id="Ef5-oE-1xF"/>
                             <constraint firstItem="O9o-S1-kdx" firstAttribute="centerY" secondItem="TEm-nc-UnQ" secondAttribute="centerY" id="Ged-R0-i4u"/>
                             <constraint firstItem="LgV-30-9SM" firstAttribute="centerY" secondItem="TEm-nc-UnQ" secondAttribute="centerY" id="QYJ-nY-Yaf"/>
                             <constraint firstItem="4nd-Q2-YO7" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" id="j39-ao-ehg"/>
                             <constraint firstItem="JJl-TI-WgF" firstAttribute="bottom" secondItem="jHN-AG-h5f" secondAttribute="bottom" constant="50" id="jEm-bF-0bU"/>
                             <constraint firstItem="jHN-AG-h5f" firstAttribute="centerX" secondItem="TEm-nc-UnQ" secondAttribute="centerX" id="koT-he-qF1"/>
+                            <constraint firstItem="4bP-XA-O7m" firstAttribute="top" secondItem="JJl-TI-WgF" secondAttribute="top" id="vIC-9B-4D9"/>
+                            <constraint firstItem="4bP-XA-O7m" firstAttribute="leading" secondItem="JJl-TI-WgF" secondAttribute="leading" constant="129" id="wY8-rg-r41"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PN5-BP-bpB">
+                        <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="scx-gO-Pj7"/>
                     </navigationItem>
                     <connections>
                         <outlet property="button1" destination="LgV-30-9SM" id="ify-ec-6bx"/>
                         <outlet property="button2" destination="O9o-S1-kdx" id="Cs5-vn-3kK"/>
                         <outlet property="nextButton" destination="jHN-AG-h5f" id="XFk-Qi-vrf"/>
+                        <outlet property="progressBar" destination="4bP-XA-O7m" id="eXp-Ar-fy8"/>
                         <outlet property="question1Label" destination="4nd-Q2-YO7" id="WhV-zv-cOo"/>
                     </connections>
                 </viewController>
@@ -231,8 +241,8 @@
                                     <segue destination="1VM-Mv-p3z" kind="show" identifier="weightToActivity" id="HNv-Bd-Rrx"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-Jb-uew">
-                                <rect key="frame" x="132" y="248" width="170.5" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-Jb-uew">
+                                <rect key="frame" x="132" y="248" width="170" height="300"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-Rh-L5z">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
@@ -242,7 +252,7 @@
                                         </constraints>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33g-8u-fRq">
-                                        <rect key="frame" x="150" y="140" width="20.5" height="20.5"/>
+                                        <rect key="frame" x="170" y="140" width="0.0" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -258,16 +268,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ce1-Js-qI6">
+                                <rect key="frame" x="132" y="92" width="150" height="4"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.8945306341" green="0.8945306341" blue="0.8945306341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MWB-FS-saB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vsq-md-480" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="0bs-XH-P8e"/>
+                            <constraint firstItem="ce1-Js-qI6" firstAttribute="leading" secondItem="MWB-FS-saB" secondAttribute="leading" constant="132" id="3uU-bZ-cyS"/>
                             <constraint firstItem="ozk-SW-Clc" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="EUZ-Rx-Byb"/>
+                            <constraint firstItem="ce1-Js-qI6" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="I7j-Zy-aJH"/>
                             <constraint firstItem="vsq-md-480" firstAttribute="top" secondItem="MWB-FS-saB" secondAttribute="top" constant="20" id="N6I-TV-bVX"/>
+                            <constraint firstItem="ce1-Js-qI6" firstAttribute="top" secondItem="MWB-FS-saB" secondAttribute="top" id="OAX-bv-DAA"/>
                             <constraint firstItem="Pee-Jb-uew" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" constant="10" id="UYc-u3-6dw"/>
                             <constraint firstItem="MWB-FS-saB" firstAttribute="bottom" secondItem="ozk-SW-Clc" secondAttribute="bottom" constant="50" id="cd6-S3-4SF"/>
                             <constraint firstItem="Pee-Jb-uew" firstAttribute="top" secondItem="vsq-md-480" secondAttribute="bottom" constant="-20" id="eRt-3q-6mP"/>
+                            <constraint firstItem="ce1-Js-qI6" firstAttribute="leading" secondItem="Pee-Jb-uew" secondAttribute="leading" id="fPh-Za-xR2"/>
                             <constraint firstItem="vsq-md-480" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="ytl-Rb-ZRP"/>
                         </constraints>
                     </view>
@@ -277,13 +296,14 @@
                     <connections>
                         <outlet property="kgLabel" destination="33g-8u-fRq" id="fpJ-Ig-FxP"/>
                         <outlet property="nextButton" destination="ozk-SW-Clc" id="Lkd-xQ-YR7"/>
+                        <outlet property="progressBar" destination="ce1-Js-qI6" id="8mC-3S-nZD"/>
                         <outlet property="question2Label" destination="vsq-md-480" id="equ-Ak-3qe"/>
                         <outlet property="weightPicker" destination="NhI-Rh-L5z" id="aUA-mt-GvZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViH-4e-5lV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3043" y="-35"/>
+            <point key="canvasLocation" x="3042.0289855072465" y="-35.491071428571423"/>
         </scene>
         <!--Activity Level View Controller-->
         <scene sceneID="hRr-uu-W9V">
@@ -405,6 +425,11 @@
                                     <action selector="button2Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="MBz-JM-nMw"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D3w-cA-4aS">
+                                <rect key="frame" x="132" y="92" width="150" height="4"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.8945306341" green="0.8945306341" blue="0.8945306341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PUT-iH-Gvq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -412,11 +437,14 @@
                             <constraint firstItem="PUT-iH-Gvq" firstAttribute="bottom" secondItem="adi-DA-qZd" secondAttribute="bottom" constant="50" id="6hV-Gd-lps"/>
                             <constraint firstItem="f1t-Zh-lR1" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" constant="95" id="85M-3F-2nn"/>
                             <constraint firstItem="f1t-Zh-lR1" firstAttribute="centerY" secondItem="WCx-dy-lRQ" secondAttribute="centerY" constant="-65" id="9nm-jm-wiO"/>
+                            <constraint firstItem="D3w-cA-4aS" firstAttribute="leading" secondItem="PUT-iH-Gvq" secondAttribute="leading" constant="132" id="AQi-6Z-vAm"/>
+                            <constraint firstItem="D3w-cA-4aS" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" id="BCi-B2-e0N"/>
                             <constraint firstItem="WiJ-al-Hhw" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" constant="-95" id="NB6-oa-Lkm"/>
                             <constraint firstItem="UGM-zo-agI" firstAttribute="centerY" secondItem="WCx-dy-lRQ" secondAttribute="centerY" constant="75" id="NSj-sX-xY7"/>
                             <constraint firstItem="UGM-zo-agI" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" constant="95" id="V0O-dV-5Yv"/>
                             <constraint firstItem="WiJ-al-Hhw" firstAttribute="centerY" secondItem="WCx-dy-lRQ" secondAttribute="centerY" constant="75" id="WVX-RZ-8DM"/>
                             <constraint firstItem="adi-DA-qZd" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" id="gUc-xu-Cd1"/>
+                            <constraint firstItem="D3w-cA-4aS" firstAttribute="top" secondItem="PUT-iH-Gvq" secondAttribute="top" id="j8c-E5-Yud"/>
                             <constraint firstItem="iur-un-MH4" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" constant="-95" id="s2P-rP-InK"/>
                             <constraint firstItem="kjG-K8-dBs" firstAttribute="top" secondItem="PUT-iH-Gvq" secondAttribute="top" constant="20" id="tg8-Kn-4Ne"/>
                             <constraint firstItem="kjG-K8-dBs" firstAttribute="centerX" secondItem="WCx-dy-lRQ" secondAttribute="centerX" id="uUa-jt-BjC"/>
@@ -432,6 +460,7 @@
                         <outlet property="button3" destination="WiJ-al-Hhw" id="Dqs-os-ECT"/>
                         <outlet property="button4" destination="UGM-zo-agI" id="jdl-BD-9lt"/>
                         <outlet property="nextButton" destination="adi-DA-qZd" id="q47-EJ-OPo"/>
+                        <outlet property="progressBar" destination="D3w-cA-4aS" id="mbK-ni-hLd"/>
                         <outlet property="question3Label" destination="kjG-K8-dBs" id="maC-bk-Oej"/>
                     </connections>
                 </viewController>
@@ -599,6 +628,11 @@
                                     <action selector="button5Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="WT9-Cm-dZf"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nUq-bd-DVI">
+                                <rect key="frame" x="132" y="92" width="150" height="4"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.8945306341" green="0.8945306341" blue="0.8945306341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qib-dD-Ukf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -606,13 +640,16 @@
                             <constraint firstItem="t6f-Rd-zV0" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="40" id="6ag-5p-F3b"/>
                             <constraint firstItem="t6f-Rd-zV0" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" constant="95" id="Ayl-qD-6SS"/>
                             <constraint firstItem="8rC-zm-68Q" firstAttribute="top" secondItem="qib-dD-Ukf" secondAttribute="top" constant="20" id="BPR-G7-ofD"/>
+                            <constraint firstItem="nUq-bd-DVI" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="BWk-OT-NVj"/>
                             <constraint firstItem="Sx6-7h-8Ig" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="-100" id="LCP-qL-pvf"/>
                             <constraint firstItem="J2G-G4-JoG" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="180" id="TTt-JS-k0c"/>
                             <constraint firstItem="6sV-0Y-m2w" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="-100" id="Uzf-5n-hfe"/>
                             <constraint firstItem="J2G-G4-JoG" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="k1i-SG-AuI"/>
                             <constraint firstItem="6sV-0Y-m2w" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" constant="-95" id="kYq-ER-0uz"/>
                             <constraint firstItem="8rC-zm-68Q" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="lxy-vU-tG0"/>
+                            <constraint firstItem="nUq-bd-DVI" firstAttribute="leading" secondItem="qib-dD-Ukf" secondAttribute="leading" constant="132" id="nRR-cA-20M"/>
                             <constraint firstItem="NGI-EF-yWK" firstAttribute="centerY" secondItem="F7I-QI-i6y" secondAttribute="centerY" constant="40" id="ndD-PZ-eaM"/>
+                            <constraint firstItem="nUq-bd-DVI" firstAttribute="top" secondItem="qib-dD-Ukf" secondAttribute="top" id="oRW-77-1JA"/>
                             <constraint firstItem="HwX-x8-ZxN" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" id="opX-cR-yeE"/>
                             <constraint firstItem="NGI-EF-yWK" firstAttribute="centerX" secondItem="F7I-QI-i6y" secondAttribute="centerX" constant="-95" id="pSZ-Yl-lrk"/>
                             <constraint firstItem="qib-dD-Ukf" firstAttribute="bottom" secondItem="HwX-x8-ZxN" secondAttribute="bottom" constant="50" id="u52-7o-RIy"/>
@@ -629,6 +666,7 @@
                         <outlet property="button4" destination="t6f-Rd-zV0" id="YMu-d5-sSr"/>
                         <outlet property="button5" destination="J2G-G4-JoG" id="jUs-v4-cd6"/>
                         <outlet property="nextButton" destination="HwX-x8-ZxN" id="gzo-6Q-o15"/>
+                        <outlet property="progressBar" destination="nUq-bd-DVI" id="an6-D4-6H4"/>
                         <outlet property="question4Label" destination="8rC-zm-68Q" id="I8c-O9-hVn"/>
                     </connections>
                 </viewController>
@@ -665,7 +703,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="pJN-Pj-LIu"/>
-                                    <segue destination="ORD-F5-j0c" kind="show" identifier="goalsToResult" id="tQi-rq-XpF"/>
+                                    <segue destination="5i9-gJ-YfK" kind="show" identifier="goalsToPreferences" id="9mK-ov-owD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM7-2A-vJG">
@@ -735,6 +773,11 @@
                                     <action selector="button3Pressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="JE5-TX-Teq"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-pe-hyR">
+                                <rect key="frame" x="132" y="92" width="150" height="4"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.8945306341" green="0.8945306341" blue="0.8945306341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V3T-cD-5T3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -745,18 +788,24 @@
                             <constraint firstItem="5kP-dN-qDW" firstAttribute="centerX" secondItem="BLV-IN-Gb5" secondAttribute="centerX" id="6Vq-vV-jGc"/>
                             <constraint firstItem="Fkj-7i-Hc2" firstAttribute="top" secondItem="V3T-cD-5T3" secondAttribute="top" constant="20" id="DTb-aa-G41"/>
                             <constraint firstItem="cm6-nA-yy1" firstAttribute="centerX" secondItem="BLV-IN-Gb5" secondAttribute="centerX" constant="95" id="HkN-8a-hdH"/>
+                            <constraint firstItem="Axn-pe-hyR" firstAttribute="centerX" secondItem="BLV-IN-Gb5" secondAttribute="centerX" id="I9f-tP-Z7J"/>
                             <constraint firstItem="5kP-dN-qDW" firstAttribute="centerY" secondItem="BLV-IN-Gb5" secondAttribute="centerY" constant="75" id="M4D-tu-A7r"/>
+                            <constraint firstItem="Axn-pe-hyR" firstAttribute="leading" secondItem="V3T-cD-5T3" secondAttribute="leading" constant="132" id="WqC-Sb-M0N"/>
                             <constraint firstItem="oM7-2A-vJG" firstAttribute="centerX" secondItem="BLV-IN-Gb5" secondAttribute="centerX" constant="-95" id="kUS-4J-u5Z"/>
+                            <constraint firstItem="Axn-pe-hyR" firstAttribute="top" secondItem="V3T-cD-5T3" secondAttribute="top" id="rwG-yy-tAi"/>
                             <constraint firstItem="cm6-nA-yy1" firstAttribute="centerY" secondItem="BLV-IN-Gb5" secondAttribute="centerY" constant="-65" id="sHk-rW-ie0"/>
                             <constraint firstItem="V3T-cD-5T3" firstAttribute="bottom" secondItem="7Ej-mj-Wde" secondAttribute="bottom" constant="50" id="tBC-sG-hV4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hAp-Zy-PhT"/>
+                    <navigationItem key="navigationItem" id="hAp-Zy-PhT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="yws-cv-DmP"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="oM7-2A-vJG" id="XgD-yy-qzc"/>
                         <outlet property="button2" destination="cm6-nA-yy1" id="7e3-ZP-0XE"/>
                         <outlet property="button3" destination="5kP-dN-qDW" id="LQa-s6-Y8l"/>
                         <outlet property="nextButton" destination="7Ej-mj-Wde" id="3zs-vx-VOX"/>
+                        <outlet property="progressBar" destination="Axn-pe-hyR" id="eja-rf-o7k"/>
                         <outlet property="question5Label" destination="Fkj-7i-Hc2" id="Np7-eD-1ct"/>
                     </connections>
                 </viewController>
@@ -778,7 +827,122 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZQ-k9-kAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6693" y="-35"/>
+            <point key="canvasLocation" x="7671" y="-35"/>
+        </scene>
+        <!--Preferences View Controller-->
+        <scene sceneID="cEA-n1-Q52">
+            <objects>
+                <viewController id="5i9-gJ-YfK" customClass="PreferencesViewController" customModule="EasyMacro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iMf-kU-HAh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 6" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjD-Ec-9Nq">
+                                <rect key="frame" x="165.5" y="112" width="83" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="wco-PZ-fAf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW1-bV-Rjj">
+                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="0.0">
+                                        <color key="backgroundColor" red="0.26274509800000001" green="0.82745098039999998" blue="0.68627450980000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <directionalEdgeInsets key="contentInsets" top="11" leading="60" bottom="11" trailing="60"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="5i9-gJ-YfK" eventType="touchUpInside" id="dq0-ky-zMs"/>
+                                    <segue destination="ORD-F5-j0c" kind="show" identifier="preferencesToResults" id="zds-2v-umy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guy-Vn-HXY">
+                                <rect key="frame" x="24" y="387" width="176" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="8fa-hL-Kfw"/>
+                                    <constraint firstAttribute="height" constant="122" id="gad-fm-E8i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Button1" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button1Pressed:" destination="5i9-gJ-YfK" eventType="touchUpInside" id="O8v-E6-IWy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOl-Nb-3wC">
+                                <rect key="frame" x="214" y="387" width="176" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="iiP-pd-pfq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="176" id="lMN-Xi-rPk"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button2" cornerStyle="medium">
+                                    <backgroundConfiguration key="background" strokeWidth="2" strokeOutset="0.0">
+                                        <color key="strokeColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="ArialMT" family="Arial" pointSize="12"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="button2Pressed:" destination="5i9-gJ-YfK" eventType="touchUpInside" id="ddd-s7-18C"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ifD-as-eMO">
+                                <rect key="frame" x="132" y="92" width="150" height="4"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.8945306341" green="0.8945306341" blue="0.8945306341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qSM-lr-pdK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TOl-Nb-3wC" firstAttribute="centerY" secondItem="iMf-kU-HAh" secondAttribute="centerY" id="89k-pC-x4c"/>
+                            <constraint firstItem="qSM-lr-pdK" firstAttribute="bottom" secondItem="MW1-bV-Rjj" secondAttribute="bottom" constant="50" id="Deh-FW-9PI"/>
+                            <constraint firstItem="TOl-Nb-3wC" firstAttribute="centerX" secondItem="iMf-kU-HAh" secondAttribute="centerX" constant="95" id="L0f-Sj-sRT"/>
+                            <constraint firstItem="ifD-as-eMO" firstAttribute="leading" secondItem="qSM-lr-pdK" secondAttribute="leading" constant="132" id="N1v-t3-rMM"/>
+                            <constraint firstItem="guy-Vn-HXY" firstAttribute="centerY" secondItem="iMf-kU-HAh" secondAttribute="centerY" id="Ooi-Bo-du8"/>
+                            <constraint firstItem="ifD-as-eMO" firstAttribute="centerX" secondItem="iMf-kU-HAh" secondAttribute="centerX" id="Qkb-8I-Xxs"/>
+                            <constraint firstItem="kjD-Ec-9Nq" firstAttribute="top" secondItem="qSM-lr-pdK" secondAttribute="top" constant="20" id="gEr-Ye-ghb"/>
+                            <constraint firstItem="guy-Vn-HXY" firstAttribute="centerX" secondItem="iMf-kU-HAh" secondAttribute="centerX" constant="-95" id="jJb-XL-VLc"/>
+                            <constraint firstItem="MW1-bV-Rjj" firstAttribute="centerX" secondItem="iMf-kU-HAh" secondAttribute="centerX" id="uXv-xs-NhG"/>
+                            <constraint firstItem="kjD-Ec-9Nq" firstAttribute="centerX" secondItem="iMf-kU-HAh" secondAttribute="centerX" id="uZ3-YU-e8h"/>
+                            <constraint firstItem="ifD-as-eMO" firstAttribute="top" secondItem="qSM-lr-pdK" secondAttribute="top" id="uba-Fe-0mV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NPy-0b-Umt">
+                        <barButtonItem key="backBarButtonItem" title=" " id="pIH-e7-TbE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="button1" destination="guy-Vn-HXY" id="gJI-0u-Jgi"/>
+                        <outlet property="button2" destination="TOl-Nb-3wC" id="gKM-N5-Zmk"/>
+                        <outlet property="nextButton" destination="MW1-bV-Rjj" id="vSn-lE-v1j"/>
+                        <outlet property="progressBar" destination="ifD-as-eMO" id="4gh-p4-Rse"/>
+                        <outlet property="question6Label" destination="kjD-Ec-9Nq" id="kh6-C7-GSR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8t-NB-esv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6738" y="-35"/>
         </scene>
     </scenes>
     <resources>

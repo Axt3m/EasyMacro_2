@@ -15,6 +15,7 @@ class WeightViewController: UIViewController {
     @IBOutlet weak var weightPicker: UIPickerView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var kgLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     public var userWeight: Int = K.defaultWeight
     
@@ -23,6 +24,8 @@ class WeightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        progressBar.progress = 2/6
         
         weightPicker.dataSource = self
         weightPicker.delegate = self

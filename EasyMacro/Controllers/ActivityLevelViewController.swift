@@ -16,6 +16,8 @@ class ActivityLevelViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     public var userActivityLevel: String = ""
     
     var userChoices = UserChoices()
@@ -24,6 +26,8 @@ class ActivityLevelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        progressBar.progress = 1/2
         
         Visual.customLabel(to: question3Label, text: K.activityQuestion, font: K.questionPolice, size: 24)
         Visual.buttonShadowAndFont(to: nextButton)

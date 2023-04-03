@@ -18,6 +18,9 @@ class SportsViewController: UIViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    
     public var userSports: String = ""
     
     var userChoices = UserChoices()
@@ -27,6 +30,8 @@ class SportsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        progressBar.progress = 4/6
         
         Visual.customLabel(to: question4Label, text: K.sportQuestion, font: K.questionPolice, size: 24)
         

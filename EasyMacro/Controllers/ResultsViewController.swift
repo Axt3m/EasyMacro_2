@@ -16,6 +16,7 @@ class ResultsViewController: UIViewController {
     var activity: String?
     var sports: String?
     var goals: String?
+    var preferences: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,13 @@ class ResultsViewController: UIViewController {
         print(Test.unwrapOptionalString(sports))
         print(Test.unwrapOptionalString(goals))
         
-        var calculatorMacro = CalculatorMacro(userChoices: UserChoices(gender: gender, weight: weight, activity: activity, sport: sports, goals: goals))
+        var calculatorMacro = CalculatorMacro(userChoices: UserChoices(gender: gender, weight: weight, activity: activity, sport: sports, goals: goals, preferences: preferences))
         
-        print(calculatorMacro.baselineCalories())
-        print(calculatorMacro.caloriesWithDeficit())
-        print(calculatorMacro.proteinRequirement())
+        print("Baseline calories: \(calculatorMacro.baselineCalories())")
+        print("Calories with deficit: \(calculatorMacro.caloriesWithDeficit())")
+        print("Proteins : \(calculatorMacro.proteinRequirement())")
+        print("Fats : \(calculatorMacro.fatsRequirement())")
+        print("Carbs : \(calculatorMacro.carbsRequirement())")
     }
     
 }

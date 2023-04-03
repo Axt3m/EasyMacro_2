@@ -27,6 +27,7 @@ struct K {
     static let sportQuestion = "What kind of sports \ndo you exercise ?"
     static let goalsQuestion = "What are \nyour goals ?"
     static let genderQuestion = "What is your sex ?"
+    static let preferencesQuestion = "What is \nyour preference ?"
     
     static let questionPolice = "Jost-SemiBold"
     
@@ -58,6 +59,9 @@ struct K {
     static let goalsAnswer1 = "Small deficit"
     static let goalsAnswer2 = "Moderate deficit"
     static let goalsAnswer3 = "Large deficit"
+    
+    static let preferencesAnswer1 = "High-fat foods"
+    static let preferencesAnswer2 = "High-carbs foods"
     
     static let answerPolice = "Jost-Light"
     
@@ -104,5 +108,13 @@ struct K {
     static let deficitFemaleGoalsAnswer1 = 0.1
     static let deficitFemaleGoalsAnswer2 = 0.2
     static let deficitFemaleGoalsAnswer3 = 0.25
+    
+    
+    static let preferencesMaleAnswer1 = 0.25
+    static let preferencesMaleAnswer2 = 0.2
+    
+    static let preferencesFemaleAnswer1 = 0.3
+    static let preferencesFemaleAnswer2 = 0.25
+    
     
 }

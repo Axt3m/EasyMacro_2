@@ -16,6 +16,8 @@ class GoalsViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     public var userGoals: String = ""
     
     var userChoices = UserChoices()
@@ -27,6 +29,8 @@ class GoalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        progressBar.progress = 5/6
         
         Visual.customLabel(to: question5Label, text: K.goalsQuestion, font: K.questionPolice, size: 24)
         
@@ -63,19 +67,19 @@ class GoalsViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: nextButton, text: K.calculateButtonTitle)
+        Visual.buttonShadowAndFont(to: nextButton)
 
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goalsToResult" {
-            let resultsVC = segue.destination as! ResultsViewController
-            resultsVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
-            resultsVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
-            resultsVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
-            resultsVC.sports = userChoices.getActivity(with: Test.unwrapOptionalString(sports))
-            resultsVC.goals = userChoices.getActivity(with: userGoals)
+        if segue.identifier == "goalsToPreferences" {
+            let preferencesVC = segue.destination as! PreferencesViewController
+            preferencesVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
+            preferencesVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
+            preferencesVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
+            preferencesVC.sports = userChoices.getActivity(with: Test.unwrapOptionalString(sports))
+            preferencesVC.goals = userChoices.getActivity(with: userGoals)
             
         }
     }

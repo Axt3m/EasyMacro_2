@@ -10,14 +10,17 @@ import UIKit
 struct CalculatorMacro {
     
     var userChoices: UserChoices
-    
-    
-    
+   
     var totalCalories: Int = 0
     var deficitCalories: Int = 0
+    
     var proteinAmount: Int = 0
     var carbsAmount: Int = 0
     var fatsAmount: Int = 0
+    
+    var caloriesFromProtein: Int = 0
+    var caloriesFromCarbs: Int = 0
+    var caloriesFromFats: Int = 0
     
     mutating func baselineCalories() -> Int {
         let weightLbs = Int(Double(userChoices.weight!) * 2.2)
@@ -103,6 +106,39 @@ struct CalculatorMacro {
         
         return proteinAmount
     }
+    
+    mutating func fatsRequirement() -> Int {
+        totalCalories = caloriesWithDeficit()
+        
+        if userChoices.gender == K.genderMale {
+            if userChoices.preferences == K.preferencesAnswer1 {
+                fatsAmount = Int(Double(totalCalories) * K.preferencesMaleAnswer1) / 9
+            } else if userChoices.preferences == K.preferencesAnswer2 {
+                fatsAmount = Int(Double(totalCalories) * K.preferencesMaleAnswer2) / 9
+            }
+        } else {
+            if userChoices.preferences == K.preferencesAnswer1 {
+                fatsAmount = Int(Double(totalCalories) * K.preferencesFemaleAnswer1) / 9
+            } else if userChoices.preferences == K.preferencesAnswer2 {
+                fatsAmount = Int(Double(totalCalories) * K.preferencesFemaleAnswer2) / 9
+            }
+        }
+        
+        return fatsAmount
+    }
+    
+    mutating func carbsRequirement() -> Int {
+        totalCalories = caloriesWithDeficit()
+        caloriesFromFats = fatsRequirement() * 9
+        caloriesFromProtein = proteinRequirement() * 4
+        caloriesFromCarbs = totalCalories - (caloriesFromFats + caloriesFromProtein)
+        
+        return caloriesFromCarbs / 4
+    }
+    
+    
+    
+    
 
 
     

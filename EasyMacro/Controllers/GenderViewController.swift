@@ -13,6 +13,7 @@ class GenderViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var userGender: String = ""
     
@@ -20,6 +21,8 @@ class GenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        progressBar.progress = 1/6
         
         Visual.customLabel(to: question1Label, text: K.genderQuestion, font: K.questionPolice, size: 24)
         
