@@ -24,4 +24,13 @@ struct Test {
         return dataInt
     }
     
+    static func stringToNumber(_ textField: UITextField) -> Int {
+        if textField.text != "" {
+            let numberText = Int(textField.text!)
+            return numberText!
+        } else {
+            return 0
+        }
+    }
+    
 }

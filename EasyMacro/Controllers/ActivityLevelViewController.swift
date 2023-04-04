@@ -82,7 +82,6 @@ class ActivityLevelViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

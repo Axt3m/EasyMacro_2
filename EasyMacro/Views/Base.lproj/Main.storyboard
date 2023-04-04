@@ -238,22 +238,22 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="kLy-g8-B0l" eventType="touchUpInside" id="iI3-bS-9Ud"/>
-                                    <segue destination="1VM-Mv-p3z" kind="show" identifier="weightToActivity" id="HNv-Bd-Rrx"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-Jb-uew">
-                                <rect key="frame" x="132" y="248" width="170" height="300"/>
+                                <rect key="frame" x="162.5" y="368" width="119" height="37.5"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-Rh-L5z">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="70" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSN-jP-7Cd">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="37.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="aZ9-sS-66A"/>
-                                            <constraint firstAttribute="width" constant="150" id="kFZ-FF-KKS"/>
+                                            <constraint firstAttribute="width" constant="70" id="oKy-hA-xFu"/>
                                         </constraints>
-                                    </pickerView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33g-8u-fRq">
-                                        <rect key="frame" x="170" y="140" width="0.0" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="90" y="4" width="29" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -281,12 +281,11 @@
                             <constraint firstItem="ce1-Js-qI6" firstAttribute="leading" secondItem="MWB-FS-saB" secondAttribute="leading" constant="132" id="3uU-bZ-cyS"/>
                             <constraint firstItem="ozk-SW-Clc" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="EUZ-Rx-Byb"/>
                             <constraint firstItem="ce1-Js-qI6" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="I7j-Zy-aJH"/>
+                            <constraint firstItem="Pee-Jb-uew" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" constant="15" id="Ij6-ZV-dHl"/>
                             <constraint firstItem="vsq-md-480" firstAttribute="top" secondItem="MWB-FS-saB" secondAttribute="top" constant="20" id="N6I-TV-bVX"/>
                             <constraint firstItem="ce1-Js-qI6" firstAttribute="top" secondItem="MWB-FS-saB" secondAttribute="top" id="OAX-bv-DAA"/>
-                            <constraint firstItem="Pee-Jb-uew" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" constant="10" id="UYc-u3-6dw"/>
                             <constraint firstItem="MWB-FS-saB" firstAttribute="bottom" secondItem="ozk-SW-Clc" secondAttribute="bottom" constant="50" id="cd6-S3-4SF"/>
-                            <constraint firstItem="Pee-Jb-uew" firstAttribute="top" secondItem="vsq-md-480" secondAttribute="bottom" constant="-20" id="eRt-3q-6mP"/>
-                            <constraint firstItem="ce1-Js-qI6" firstAttribute="leading" secondItem="Pee-Jb-uew" secondAttribute="leading" id="fPh-Za-xR2"/>
+                            <constraint firstItem="Pee-Jb-uew" firstAttribute="top" secondItem="vsq-md-480" secondAttribute="bottom" constant="100" id="eRt-3q-6mP"/>
                             <constraint firstItem="vsq-md-480" firstAttribute="centerX" secondItem="cIE-dO-Fsy" secondAttribute="centerX" id="ytl-Rb-ZRP"/>
                         </constraints>
                     </view>
@@ -298,7 +297,8 @@
                         <outlet property="nextButton" destination="ozk-SW-Clc" id="Lkd-xQ-YR7"/>
                         <outlet property="progressBar" destination="ce1-Js-qI6" id="8mC-3S-nZD"/>
                         <outlet property="question2Label" destination="vsq-md-480" id="equ-Ak-3qe"/>
-                        <outlet property="weightPicker" destination="NhI-Rh-L5z" id="aUA-mt-GvZ"/>
+                        <outlet property="weightTextField" destination="QSN-jP-7Cd" id="rm5-mo-HLP"/>
+                        <segue destination="1VM-Mv-p3z" kind="show" identifier="weightToActivity" id="bLQ-7J-XJ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViH-4e-5lV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -820,14 +820,130 @@
                     <view key="view" contentMode="scaleToFill" id="IVs-LZ-Bo9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Daily Needs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-eK-Ijg">
+                                <rect key="frame" x="82" y="132" width="250" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4CE-aB-k9T"/>
+                                    <constraint firstAttribute="width" constant="250" id="9b2-J6-9cC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-sY-ppV">
+                                <rect key="frame" x="132" y="338" width="150" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0Ez-OL-7rA"/>
+                                    <constraint firstAttribute="height" constant="120" id="7S9-gb-r32"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Protein %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7b-zS-zqv">
+                                <rect key="frame" x="40" y="617" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92961001399999998" green="0.63285553459999999" blue="0.66971093420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y0r-oB-EaZ">
+                                <rect key="frame" x="40" y="646" width="91" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.92961001399999998" green="0.63285553459999999" blue="0.66971093420000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="NvF-dF-xmg">
+                                <rect key="frame" x="171" y="646" width="91" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="7FS-KJ-aiX">
+                                <rect key="frame" x="301" y="646" width="91" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.26385676860000001" green="0.82646185159999996" blue="0.68573760989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carbs %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okj-uo-wPV">
+                                <rect key="frame" x="171" y="617" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.6907469034" green="0.6795005798" blue="0.88502508400000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carbs g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9g-ER-FSG">
+                                <rect key="frame" x="171" y="665" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0Z-R5-NFG">
+                                <rect key="frame" x="171" y="701" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fats %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYh-mZ-Jco">
+                                <rect key="frame" x="301" y="616" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.26385676860000001" green="0.82646185159999996" blue="0.68573760989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fats g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-G1-cW8">
+                                <rect key="frame" x="301" y="665" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Protein g" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2f-fA-2pG">
+                                <rect key="frame" x="40" y="665" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Protein" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-h5-7fg">
+                                <rect key="frame" x="40" y="701" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fats" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN3-B2-arC">
+                                <rect key="frame" x="301" y="701" width="113" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZUt-3Y-H6U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9yX-sY-ppV" firstAttribute="centerY" secondItem="IVs-LZ-Bo9" secondAttribute="centerY" constant="-50" id="0r0-mE-y67"/>
+                            <constraint firstItem="g9b-eK-Ijg" firstAttribute="centerX" secondItem="IVs-LZ-Bo9" secondAttribute="centerX" id="8Qe-hf-4Gc"/>
+                            <constraint firstItem="g9b-eK-Ijg" firstAttribute="top" secondItem="ZUt-3Y-H6U" secondAttribute="top" constant="40" id="S6K-yp-o6P"/>
+                            <constraint firstItem="9yX-sY-ppV" firstAttribute="centerX" secondItem="IVs-LZ-Bo9" secondAttribute="centerX" id="u4I-PH-Pzr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eVu-oG-xD3"/>
+                    <connections>
+                        <outlet property="carbsGrLabel" destination="n9g-ER-FSG" id="0xJ-zo-xil"/>
+                        <outlet property="carbsPctLabel" destination="okj-uo-wPV" id="Dsx-og-WHu"/>
+                        <outlet property="fatsGrLabel" destination="b5G-G1-cW8" id="zqn-kH-da9"/>
+                        <outlet property="fatsPctLabel" destination="IYh-mZ-Jco" id="fSi-zA-YE4"/>
+                        <outlet property="proteinGrLabel" destination="b2f-fA-2pG" id="Z01-va-Yg1"/>
+                        <outlet property="proteinPctLabel" destination="F7b-zS-zqv" id="bx2-bO-Ie0"/>
+                        <outlet property="resultsLabel" destination="g9b-eK-Ijg" id="gcG-z0-pEz"/>
+                        <outlet property="totalCaloriesLabel" destination="9yX-sY-ppV" id="btg-Nn-TQz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fZQ-k9-kAA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7671" y="-35"/>
+            <point key="canvasLocation" x="7669.5652173913049" y="-35.491071428571423"/>
         </scene>
         <!--Preferences View Controller-->
         <scene sceneID="cEA-n1-Q52">

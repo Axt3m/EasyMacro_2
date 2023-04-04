@@ -33,6 +33,7 @@ class GenderViewController: UIViewController {
         Visual.customButton(to: button2, text: K.genderFemale)
         
         Visual.buttonShadowAndFont(to: nextButton)
+        
     }
     
     @IBAction func button1Pressed(_ sender: UIButton) {

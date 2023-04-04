@@ -22,6 +22,10 @@ struct CalculatorMacro {
     var caloriesFromCarbs: Int = 0
     var caloriesFromFats: Int = 0
     
+    var proteinPercentage: Double = 0.0
+    var carbsPct: Double = 0.0
+    var fatsPct: Double = 0.0
+    
     mutating func baselineCalories() -> Int {
         let weightLbs = Int(Double(userChoices.weight!) * 2.2)
         
@@ -136,6 +140,12 @@ struct CalculatorMacro {
         return caloriesFromCarbs / 4
     }
     
+//    mutating func proteinPercentage() -> Double {
+//        totalCalories = caloriesWithDeficit()
+//        caloriesFromProtein = proteinRequirement() * 4
+//        return (caloriesFromProtein/totalCalories) * 100
+//    }
+//    
     
     
     

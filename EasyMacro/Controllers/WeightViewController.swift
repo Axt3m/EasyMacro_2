@@ -12,10 +12,12 @@ class WeightViewController: UIViewController {
     
     
     @IBOutlet weak var question2Label: UILabel!
-    @IBOutlet weak var weightPicker: UIPickerView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var kgLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var weightTextField: UITextField!
+    
     
     public var userWeight: Int = K.defaultWeight
     
@@ -26,22 +28,32 @@ class WeightViewController: UIViewController {
         super.viewDidLoad()
         
         progressBar.progress = 2/6
-        
-        weightPicker.dataSource = self
-        weightPicker.delegate = self
-        weightPicker.selectRow(K.defaultWeight - K.minWeight, inComponent: 0, animated: true)
-        
+        weightTextField.keyboardType = .numberPad
+        weightTextField.delegate = self
         
         Visual.customLabel(to: question2Label, text: K.weightQuestion, font: K.questionPolice, size: 25)
-        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 18)
+        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 25)
         Visual.buttonShadowAndFont(to: nextButton)
-        
-
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         Visual.buttonShadowAndFont(to: nextButton)
         
+        userWeight = Test.stringToNumber(weightTextField)
+        print(userWeight)
+        
+        if userWeight == 0 {
+            weightTextField.text = ""
+            weightTextField.placeholder = "70"
+        } else if userWeight < 20 {
+            weightTextField.text = ""
+            weightTextField.placeholder = "20"
+        } else if userWeight >= 300 {
+            weightTextField.text = ""
+            weightTextField.placeholder = "150"
+        } else {
+            self.performSegue(withIdentifier: "weightToActivity", sender: self)
+        }
         
 
     }
@@ -54,33 +66,26 @@ class WeightViewController: UIViewController {
             activityVC.weight = userChoices.getWeight(with: userWeight)
         }
     }
-    
-
-    
-    
-    
-
-    
 }
 
-extension WeightViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+extension WeightViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == weightTextField {
+            let maxNumbers = 3
+            let newLength: Int = textField.text!.count + string.count - range.length
+            let allowedCharacters = CharacterSet(charactersIn: "0123456789")
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet) && (newLength <= maxNumbers)
+        }
+        return true
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return K.maxWeight - K.minWeight + 1
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return weightTextField.resignFirstResponder()
     }
     
-}
-
-extension WeightViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(K.minWeight + row)"
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        userWeight = row + K.minWeight
-    }
-    
 }

@@ -75,6 +75,8 @@ struct K {
     
     static let nextButtonColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
     
+    static let resultsTitle = "Your Daily \nNeeds"
+    
     //MARK: - Multiplier constants
     
     static let multiplierCaloriesMaleActivityAnswer1 = 14
