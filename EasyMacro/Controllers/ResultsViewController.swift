@@ -11,6 +11,7 @@ import Charts
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
+    @IBOutlet weak var resultsLabel2: UILabel!
     @IBOutlet weak var totalCaloriesLabel: UILabel!
     @IBOutlet weak var proteinPctLabel: UILabel!
     @IBOutlet weak var carbsPctLabel: UILabel!
@@ -20,6 +21,8 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var fatsGrLabel: UILabel!
     
     @IBOutlet weak var pieChart: PieChartView!
+    
+    @IBOutlet weak var recalculateButton: UIButton!
     
     var proteinDataEntry = PieChartDataEntry(value: 0)
     var carbsDataEntry = PieChartDataEntry(value: 0)
@@ -47,12 +50,20 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        print(Test.unwrapOptionalString(gender))
-        //        print(Test.unwrapOptionalInt(weight))
-        //        print(Test.unwrapOptionalString(activity))
-        //        print(Test.unwrapOptionalString(sports))
-        //        print(Test.unwrapOptionalString(goals))
+        calculateAllMacros()
         
+        customScreen()
+        
+        proteinDataEntry.value = userProteinPct
+        carbsDataEntry.value = userCarbsPct
+        fatsDataEntry.value = userFatsPct
+        
+        numberOfDataEntries = [proteinDataEntry, carbsDataEntry, fatsDataEntry]
+        updateChartData()
+
+    }
+    
+    private func calculateAllMacros() {
         var calculatorMacro = CalculatorMacro(userChoices: UserChoices(gender: gender, weight: weight, activity: activity, sport: sports, goals: goals, preferences: preferences))
         
         userBaselineCalories = calculatorMacro.baselineCalories()
@@ -60,48 +71,56 @@ class ResultsViewController: UIViewController {
         userProteinAmount = calculatorMacro.proteinRequirement()
         userFatsAmount = calculatorMacro.fatsRequirement()
         userCarbsAmount = calculatorMacro.carbsRequirement()
-        
-        Visual.customLabel(to: resultsLabel, text: K.resultsTitle, font: K.questionPolice, size: 30)
-        
-        Visual.customLabel(to: totalCaloriesLabel, text: "\(userCalorieswithDeficit) cal", font: K.questionPolice, size: 28)
- 
-        
-        userProteinPct = round((Double(calculatorMacro.caloriesFromProtein) / Double(userCalorieswithDeficit)) * 100)
-        proteinPctLabel.text = "\(Int(userProteinPct)) %"
-        proteinGrLabel.text = "\(userProteinAmount) g"
-        
-        userCarbsPct = round((Double(calculatorMacro.caloriesFromCarbs) / Double(userCalorieswithDeficit)) * 100)
-        carbsPctLabel.text = "\(Int(userCarbsPct)) %"
-        carbsGrLabel.text = "\(userFatsAmount) g"
-        
-        userFatsPct = round((Double(calculatorMacro.caloriesFromFats) / Double(userCalorieswithDeficit)) * 100)
-        fatsPctLabel.text = "\(Int(userFatsPct)) %"
-        fatsGrLabel.text = "\(userCarbsAmount) g"
-        
-        pieChart.chartDescription?.text = ""
-        proteinDataEntry.value = userProteinPct
-        proteinDataEntry.label = "Protein"
-        carbsDataEntry.value = userCarbsPct
-        carbsDataEntry.label = "Carbs"
-        fatsDataEntry.value = userFatsPct
-        fatsDataEntry.label = "Fats"
-        
-        numberOfDataEntries = [proteinDataEntry, carbsDataEntry, fatsDataEntry]
-        updateChartData()
-
+        userProteinPct = calculatorMacro.proteinPct
+        userCarbsPct = calculatorMacro.carbsPct
+        userFatsPct = calculatorMacro.fatsPct
     }
     
-    func updateChartData() {
+    private func customScreen() {
+        Visual.customLabel(to: resultsLabel, text: K.resultsTitle, font: K.welcomeTitlePolice, size: 30)
+        Visual.customLabel(to: resultsLabel2, text: K.resultsTitle2, font: K.welcomeTextPolice1, size: 25)
+        Visual.customLabel(to: totalCaloriesLabel, text: "\(userCalorieswithDeficit)", font: K.nextButtonPolice, size: 30)
+
+        Visual.customLabel(to: proteinPctLabel, text: String(format: K.formatPct, userProteinPct), font: K.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: carbsPctLabel, text: String(format: K.formatPct, userCarbsPct), font: K.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: fatsPctLabel, text: String(format: K.formatPct, userFatsPct), font: K.welcomeTextPolice2, size: 20)
+        
+        Visual.customLabel(to: proteinGrLabel, text: "\(userProteinAmount) g", font: K.answerPolice, size: 18)
+        Visual.customLabel(to: carbsGrLabel, text: "\(userCarbsAmount) g", font: K.answerPolice, size: 18)
+        Visual.customLabel(to: fatsGrLabel, text: "\(userFatsAmount) g", font: K.answerPolice, size: 18)
+        
+        Visual.buttonShadowAndFont(to: recalculateButton, text: K.recalculateButtonTitle)
+    }
+    
+    
+    private func updateChartData() {
         
         let chartDataSet = PieChartDataSet(entries: numberOfDataEntries, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
         
-        let colors = [UIColor(red: 237.0/255.0, green: 161.0/255.0, blue: 171.0/255.0, alpha: 1), UIColor(red: 176.0/255.0, green: 173.0/255.0, blue: 226.0/255.0, alpha: 1), UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1)]
-        
-        chartDataSet.colors = colors //as! [NSUIColor]
-        
+        customChart(withDataSet: chartDataSet)
         
         pieChart.data = chartData
     }
     
+    private func customChart(withDataSet chartDataSet: PieChartDataSet){
+        
+        chartDataSet.colors = [K.proteinColor, K.carbsColor, K.fatsColor]
+        
+        pieChart.holeRadiusPercent = 0.60
+        pieChart.transparentCircleRadiusPercent = 0.63
+        pieChart.chartDescription?.text = ""
+        pieChart.legend.enabled = false
+        
+        proteinDataEntry.label = K.proteinLabel
+        carbsDataEntry.label = K.carbsLabel
+        fatsDataEntry.label = K.fatsLabel
+
+    }
+    
+    
+    @IBAction func recalculatePressed(_ sender: UIButton) {
+
+        navigationController?.popToRootViewController(animated: true)
+    }
 }

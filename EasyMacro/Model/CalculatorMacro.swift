@@ -22,7 +22,7 @@ struct CalculatorMacro {
     var caloriesFromCarbs: Int = 0
     var caloriesFromFats: Int = 0
     
-    var proteinPercentage: Double = 0.0
+    var proteinPct: Double = 0.0
     var carbsPct: Double = 0.0
     var fatsPct: Double = 0.0
     
@@ -108,6 +108,7 @@ struct CalculatorMacro {
             }
         }
         
+        
         return proteinAmount
     }
     
@@ -127,7 +128,7 @@ struct CalculatorMacro {
                 fatsAmount = Int(Double(totalCalories) * K.preferencesFemaleAnswer2) / 9
             }
         }
-        
+ 
         return fatsAmount
     }
     
@@ -137,15 +138,16 @@ struct CalculatorMacro {
         caloriesFromProtein = proteinRequirement() * 4
         caloriesFromCarbs = totalCalories - (caloriesFromFats + caloriesFromProtein)
         
+        fatsPct = (Double(caloriesFromFats) / Double(totalCalories)) * 100
+        proteinPct = (Double(caloriesFromProtein) / Double(totalCalories)) * 100
+        carbsPct = (Double(caloriesFromCarbs) / Double(totalCalories)) * 100
+        
+        
         return caloriesFromCarbs / 4
     }
     
-//    mutating func proteinPercentage() -> Double {
-//        totalCalories = caloriesWithDeficit()
-//        caloriesFromProtein = proteinRequirement() * 4
-//        return (caloriesFromProtein/totalCalories) * 100
-//    }
-//    
+
+    
     
     
     

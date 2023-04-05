@@ -75,7 +75,23 @@ struct K {
     
     static let nextButtonColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
     
-    static let resultsTitle = "Your Daily \nNeeds"
+    //MARK: - Results screen
+    
+    static let resultsTitle = "Well done!"
+    static let resultsTitle2 = "Here are your daily needs:"
+    static let proteinLabel = "Protein"
+    static let carbsLabel = "Carbs"
+    static let fatsLabel = "Fats"
+    
+    static let proteinColor = UIColor(red: 240.0/255.0, green: 109.0/255.0, blue: 147.0/255.0, alpha: 1)
+    static let carbsColor = UIColor(red: 93.0/255.0, green: 220.0/255.0, blue: 223.0/255.0, alpha: 1)
+    static let fatsColor = UIColor(red: 125.0/255.0, green: 190.0/255.0, blue: 254.0/255.0, alpha: 1)
+    
+    //UIColor(red: 176.0/255.0, green: 173.0/255.0, blue: 226.0/255.0, alpha: 1)
+    
+    static let formatPct = "%.1f %%"
+    
+    static let recalculateButtonTitle = "Recalculate"
     
     //MARK: - Multiplier constants
     

@@ -31,6 +31,8 @@ class WeightViewController: UIViewController {
         weightTextField.keyboardType = .numberPad
         weightTextField.delegate = self
         
+        weightTextField.font = UIFont(name: K.questionPolice, size: 40)
+        
         Visual.customLabel(to: question2Label, text: K.weightQuestion, font: K.questionPolice, size: 25)
         Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 25)
         Visual.buttonShadowAndFont(to: nextButton)
