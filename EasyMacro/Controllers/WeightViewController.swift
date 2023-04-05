@@ -33,8 +33,8 @@ class WeightViewController: UIViewController {
         
         weightTextField.font = UIFont(name: K.questionPolice, size: 40)
         
-        Visual.customLabel(to: question2Label, text: K.weightQuestion, font: K.questionPolice, size: 25)
-        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 25)
+        Visual.customLabel(to: question2Label, text: K.weightQuestion, font: K.questionPolice, size: 27)
+        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 18)
         Visual.buttonShadowAndFont(to: nextButton)
     }
     

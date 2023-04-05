@@ -33,7 +33,7 @@ class SportsViewController: UIViewController {
         
         progressBar.progress = 4/6
         
-        Visual.customLabel(to: question4Label, text: K.sportQuestion, font: K.questionPolice, size: 24)
+        Visual.customLabel(to: question4Label, text: K.sportQuestion, font: K.questionPolice, size: 27)
         
         Visual.customButton(to: button1, text: K.sportAnswer1, isDefaultButton: true) {text in self.userSports = text}
         Visual.customButton(to: button2, text: K.sportAnswer2)

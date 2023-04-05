@@ -32,7 +32,7 @@ class GoalsViewController: UIViewController {
         
         progressBar.progress = 5/6
         
-        Visual.customLabel(to: question5Label, text: K.goalsQuestion, font: K.questionPolice, size: 24)
+        Visual.customLabel(to: question5Label, text: K.goalsQuestion, font: K.questionPolice, size: 27)
         
         Visual.customButton(to: button1, text: K.goalsAnswer1, isDefaultButton: true) {defaultTextButton in
             self.userGoals = defaultTextButton

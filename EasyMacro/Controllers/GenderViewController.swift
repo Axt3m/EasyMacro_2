@@ -24,7 +24,7 @@ class GenderViewController: UIViewController {
         
         progressBar.progress = 1/6
         
-        Visual.customLabel(to: question1Label, text: K.genderQuestion, font: K.questionPolice, size: 24)
+        Visual.customLabel(to: question1Label, text: K.genderQuestion, font: K.questionPolice, size: 27)
         
         Visual.customButton(to: button1, text: K.genderMale, isDefaultButton: true) {defaultTextButton in
             self.userGender = defaultTextButton

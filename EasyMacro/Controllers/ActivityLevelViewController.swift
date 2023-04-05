@@ -29,7 +29,7 @@ class ActivityLevelViewController: UIViewController {
         
         progressBar.progress = 1/2
         
-        Visual.customLabel(to: question3Label, text: K.activityQuestion, font: K.questionPolice, size: 24)
+        Visual.customLabel(to: question3Label, text: K.activityQuestion, font: K.questionPolice, size: 27)
         Visual.buttonShadowAndFont(to: nextButton)
 
         Visual.customButton(to: button1, text: K.activityAnswer1, isDefaultButton: true) {defaultTextButton in

@@ -36,9 +36,9 @@ struct K {
     static let defaultWeight = 65
     static let minWeight = 20
     static let maxWeight = 300
-    static let kgMetrics = "Kg"
+    static let kgMetrics = "kg"
     
-    static let kgPolice = "Jost-SemiBold"
+    static let kgPolice = "Jost-Light"
     
     //MARK: - Answers
     
@@ -92,6 +92,22 @@ struct K {
     static let formatPct = "%.1f %%"
     
     static let recalculateButtonTitle = "Recalculate"
+    
+    //MARK: - Deficit Info
+    
+    static let smallDeficitTitle = "Small Deficit"
+    static let moderateDeficitTitle = "Moderate Deficit"
+    static let largeDeficitTitle = "Large Deficit"
+    
+    static let smallDeficitInfoLabel = "• A small deficit involves less overall restriction, which can lead to better long-term adherence (and results!). \n• Keep in mind that progress is slower than with a moderate or large deficit. \n• This works for someone who's already lean with little fat to loose and has already a macro-tracking experience."
+    static let moderateDeficitInfoLabel = "• A moderate deficit is considered as a faster average fat loss for most people, without requiring a massive food restriction. \n• Keep in mind that your body may 'fight back' to some degree with hormonal and metabolic changes. \n• This works for anyone looking for slow and steady progress without feeling incredibly restricted. The majority of the population will work best on a moderate deficit."
+    static let largeDeficitInfoLabel = "• A large deficit is the maximal rate of fat loss and quick initial drop in weight. \n• Keep in mind that there is very little food flexibility and it is common to feel very restricted and hungry, which can lead to low long-term adherence. For someone who's very active, it can negatively impact the training/recovery. \n• This works for anyone who's impatient, motivated by quick weight loss and/or who must lose fat for a specific event in a short timeframe."
+
+    //MARK: - Fats Info
+    
+    static let fatsTitleLabel = "Fats or Carbs ?"
+    
+    static let fatsInfoLabel = "Fat is an essential nutrient, which means that it is crucial for normal body function, and you could not live without it. It supplies you with energy and also makes it possible for other nutrients in your body to do their jobs. \n\nThe specific amount of fat that is right for you will depend on your preferences. Do you tend to prefer higher-fat foods or higher-carb foods ? \n\nThink about your current daily food intake and consider whether you tend to gravitate towards fats or carbs."
     
     //MARK: - Multiplier constants
     

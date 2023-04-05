@@ -19,6 +19,8 @@
 		C60A1F5D29BF37F70061F3BC /* Jost-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */; };
 		C60A1F5E29BF37F70061F3BC /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */; };
 		C60A1F5F29BF37F70061F3BC /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */; };
+		C626CEB629DDA39D00E97E5B /* DeficitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626CEB529DDA39D00E97E5B /* DeficitInfo.swift */; };
+		C626CEB829DDB03200E97E5B /* FatsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626CEB729DDB03200E97E5B /* FatsInfo.swift */; };
 		C665CD8A29D199E30050CD57 /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8929D199E30050CD57 /* SportsViewController.swift */; };
 		C665CD8C29D1E99B0050CD57 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8B29D1E99B0050CD57 /* GoalsViewController.swift */; };
 		C665CD8E29D1ECEA0050CD57 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8D29D1ECEA0050CD57 /* ResultsViewController.swift */; };
@@ -47,6 +49,8 @@
 		C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Bold.ttf"; sourceTree = "<group>"; };
 		C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
 		C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
+		C626CEB529DDA39D00E97E5B /* DeficitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeficitInfo.swift; sourceTree = "<group>"; };
+		C626CEB729DDB03200E97E5B /* FatsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatsInfo.swift; sourceTree = "<group>"; };
 		C665CD8929D199E30050CD57 /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		C665CD8B29D1E99B0050CD57 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		C665CD8D29D1ECEA0050CD57 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +84,6 @@
 				0E94C634D7E0E0AC910BB390 /* Pods-EasyMacro.debug.xcconfig */,
 				D88983949B59038357AAEE2C /* Pods-EasyMacro.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,6 +144,8 @@
 				C665CD8B29D1E99B0050CD57 /* GoalsViewController.swift */,
 				C6836FDE29D721ED006CF57D /* PreferencesViewController.swift */,
 				C665CD8D29D1ECEA0050CD57 /* ResultsViewController.swift */,
+				C626CEB529DDA39D00E97E5B /* DeficitInfo.swift */,
+				C626CEB729DDB03200E97E5B /* FatsInfo.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C626CEB629DDA39D00E97E5B /* DeficitInfo.swift in Sources */,
 				C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */,
 				C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */,
 				C682DBF729C1EC7700B41A0E /* ActivityLevelViewController.swift in Sources */,
+				C626CEB829DDB03200E97E5B /* FatsInfo.swift in Sources */,
 				C6836FDF29D721ED006CF57D /* PreferencesViewController.swift in Sources */,
 				C6808A7C29D4347C005E7D91 /* Test.swift in Sources */,
 				C665CD8E29D1ECEA0050CD57 /* ResultsViewController.swift in Sources */,

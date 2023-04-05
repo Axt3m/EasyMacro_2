@@ -31,7 +31,7 @@ class PreferencesViewController: UIViewController {
         
         progressBar.progress = 1.0
         
-        Visual.customLabel(to: question6Label, text: K.preferencesQuestion, font: K.questionPolice, size: 24)
+        Visual.customLabel(to: question6Label, text: K.preferencesQuestion, font: K.questionPolice, size: 27)
         
         Visual.customButton(to: button1, text: K.preferencesAnswer1, isDefaultButton: true) {defaultTextButton in
             self.userPreferences = defaultTextButton

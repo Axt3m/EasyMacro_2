@@ -20,6 +20,10 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var carbsGrLabel: UILabel!
     @IBOutlet weak var fatsGrLabel: UILabel!
     
+    @IBOutlet weak var proteinCalLabel: UILabel!
+    @IBOutlet weak var carbsCalLabel: UILabel!
+    @IBOutlet weak var fatsCalLabel: UILabel!
+    
     @IBOutlet weak var pieChart: PieChartView!
     
     @IBOutlet weak var recalculateButton: UIButton!
@@ -46,6 +50,9 @@ class ResultsViewController: UIViewController {
     var userProteinPct: Double = 0
     var userFatsPct: Double = 0
     var userCarbsPct: Double = 0
+    var userProteinCal: Int = 0
+    var userCarbsCal: Int = 0
+    var userFatsCal: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +61,9 @@ class ResultsViewController: UIViewController {
         
         customScreen()
         
-        proteinDataEntry.value = userProteinPct
-        carbsDataEntry.value = userCarbsPct
-        fatsDataEntry.value = userFatsPct
+        proteinDataEntry.value = Double(userProteinCal)
+        carbsDataEntry.value = Double(userCarbsCal)
+        fatsDataEntry.value = Double(userFatsCal)
         
         numberOfDataEntries = [proteinDataEntry, carbsDataEntry, fatsDataEntry]
         updateChartData()
@@ -74,21 +81,28 @@ class ResultsViewController: UIViewController {
         userProteinPct = calculatorMacro.proteinPct
         userCarbsPct = calculatorMacro.carbsPct
         userFatsPct = calculatorMacro.fatsPct
+        userProteinCal = calculatorMacro.caloriesFromProtein
+        userCarbsCal = calculatorMacro.caloriesFromCarbs
+        userFatsCal = calculatorMacro.caloriesFromFats
     }
     
     private func customScreen() {
-        Visual.customLabel(to: resultsLabel, text: K.resultsTitle, font: K.welcomeTitlePolice, size: 30)
-        Visual.customLabel(to: resultsLabel2, text: K.resultsTitle2, font: K.welcomeTextPolice1, size: 25)
+        Visual.customLabel(to: resultsLabel, text: K.resultsTitle, font: K.welcomeTitlePolice, size: 35)
+        Visual.customLabel(to: resultsLabel2, text: K.resultsTitle2, font: K.welcomeTextPolice1, size: 22)
         Visual.customLabel(to: totalCaloriesLabel, text: "\(userCalorieswithDeficit)", font: K.nextButtonPolice, size: 30)
+        
+        Visual.customLabel(to: proteinGrLabel, text: "\(userProteinAmount) g", font: K.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: carbsGrLabel, text: "\(userCarbsAmount) g", font: K.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: fatsGrLabel, text: "\(userFatsAmount) g", font: K.welcomeTextPolice2, size: 20)
+        
+        Visual.customLabel(to: proteinPctLabel, text: String(format: K.formatPct, userProteinPct), font: K.answerPolice, size: 18)
+        Visual.customLabel(to: carbsPctLabel, text: String(format: K.formatPct, userCarbsPct), font: K.answerPolice, size: 18)
+        Visual.customLabel(to: fatsPctLabel, text: String(format: K.formatPct, userFatsPct), font: K.answerPolice, size: 18)
+        
+        Visual.customLabel(to: proteinCalLabel, text: "\(userProteinCal) cal", font: K.answerPolice, size: 18)
+        Visual.customLabel(to: carbsCalLabel, text: "\(userCarbsCal) cal", font: K.answerPolice, size: 18)
+        Visual.customLabel(to: fatsCalLabel, text: "\(userFatsCal) cal", font: K.answerPolice, size: 18)
 
-        Visual.customLabel(to: proteinPctLabel, text: String(format: K.formatPct, userProteinPct), font: K.welcomeTextPolice2, size: 20)
-        Visual.customLabel(to: carbsPctLabel, text: String(format: K.formatPct, userCarbsPct), font: K.welcomeTextPolice2, size: 20)
-        Visual.customLabel(to: fatsPctLabel, text: String(format: K.formatPct, userFatsPct), font: K.welcomeTextPolice2, size: 20)
-        
-        Visual.customLabel(to: proteinGrLabel, text: "\(userProteinAmount) g", font: K.answerPolice, size: 18)
-        Visual.customLabel(to: carbsGrLabel, text: "\(userCarbsAmount) g", font: K.answerPolice, size: 18)
-        Visual.customLabel(to: fatsGrLabel, text: "\(userFatsAmount) g", font: K.answerPolice, size: 18)
-        
         Visual.buttonShadowAndFont(to: recalculateButton, text: K.recalculateButtonTitle)
     }
     
