@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Charts
 
 class ResultsViewController: UIViewController {
     
@@ -18,7 +19,13 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var carbsGrLabel: UILabel!
     @IBOutlet weak var fatsGrLabel: UILabel!
     
+    @IBOutlet weak var pieChart: PieChartView!
     
+    var proteinDataEntry = PieChartDataEntry(value: 0)
+    var carbsDataEntry = PieChartDataEntry(value: 0)
+    var fatsDataEntry = PieChartDataEntry(value: 0)
+    
+    var numberOfDataEntries = [PieChartDataEntry]()
     
     var userChoices = UserChoices()
     var gender: String?
@@ -71,11 +78,30 @@ class ResultsViewController: UIViewController {
         fatsPctLabel.text = "\(Int(userFatsPct)) %"
         fatsGrLabel.text = "\(userCarbsAmount) g"
         
-        print(userProteinPct + userCarbsPct + userFatsPct)
+        pieChart.chartDescription?.text = ""
+        proteinDataEntry.value = userProteinPct
+        proteinDataEntry.label = "Protein"
+        carbsDataEntry.value = userCarbsPct
+        carbsDataEntry.label = "Carbs"
+        fatsDataEntry.value = userFatsPct
+        fatsDataEntry.label = "Fats"
+        
+        numberOfDataEntries = [proteinDataEntry, carbsDataEntry, fatsDataEntry]
+        updateChartData()
+
+    }
+    
+    func updateChartData() {
+        
+        let chartDataSet = PieChartDataSet(entries: numberOfDataEntries, label: nil)
+        let chartData = PieChartData(dataSet: chartDataSet)
+        
+        let colors = [UIColor(red: 237.0/255.0, green: 161.0/255.0, blue: 171.0/255.0, alpha: 1), UIColor(red: 176.0/255.0, green: 173.0/255.0, blue: 226.0/255.0, alpha: 1), UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1)]
+        
+        chartDataSet.colors = colors //as! [NSUIColor]
         
         
-        
-        
+        pieChart.data = chartData
     }
     
 }

@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHN-AG-h5f">
-                                <rect key="frame" x="129.5" y="769.5" width="155" height="42.5"/>
+                                <rect key="frame" x="129.5" y="769.5" width="155.5" height="42.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="0.0">
@@ -831,16 +831,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-sY-ppV">
-                                <rect key="frame" x="132" y="338" width="150" height="120"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="0Ez-OL-7rA"/>
-                                    <constraint firstAttribute="height" constant="120" id="7S9-gb-r32"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Protein %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7b-zS-zqv">
                                 <rect key="frame" x="40" y="617" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -884,9 +874,8 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fats %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYh-mZ-Jco">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fats %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYh-mZ-Jco">
                                 <rect key="frame" x="301" y="616" width="113" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.26385676860000001" green="0.82646185159999996" blue="0.68573760989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -919,14 +908,33 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYH-D6-ooD" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="232" width="374" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yX-sY-ppV">
+                                <rect key="frame" x="132" y="338" width="150" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0Ez-OL-7rA"/>
+                                    <constraint firstAttribute="height" constant="120" id="7S9-gb-r32"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZUt-3Y-H6U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9yX-sY-ppV" firstAttribute="centerY" secondItem="IVs-LZ-Bo9" secondAttribute="centerY" constant="-50" id="0r0-mE-y67"/>
+                            <constraint firstItem="QYH-D6-ooD" firstAttribute="top" secondItem="g9b-eK-Ijg" secondAttribute="bottom" id="1JF-5W-vRS"/>
                             <constraint firstItem="g9b-eK-Ijg" firstAttribute="centerX" secondItem="IVs-LZ-Bo9" secondAttribute="centerX" id="8Qe-hf-4Gc"/>
+                            <constraint firstItem="QYH-D6-ooD" firstAttribute="centerX" secondItem="9yX-sY-ppV" secondAttribute="centerX" id="LyI-bf-yAq"/>
+                            <constraint firstItem="9yX-sY-ppV" firstAttribute="centerX" secondItem="IVs-LZ-Bo9" secondAttribute="centerX" id="NKa-SL-WBA"/>
                             <constraint firstItem="g9b-eK-Ijg" firstAttribute="top" secondItem="ZUt-3Y-H6U" secondAttribute="top" constant="40" id="S6K-yp-o6P"/>
-                            <constraint firstItem="9yX-sY-ppV" firstAttribute="centerX" secondItem="IVs-LZ-Bo9" secondAttribute="centerX" id="u4I-PH-Pzr"/>
+                            <constraint firstItem="9yX-sY-ppV" firstAttribute="centerY" secondItem="IVs-LZ-Bo9" secondAttribute="centerY" constant="-50" id="myV-Eu-m00"/>
+                            <constraint firstItem="ZUt-3Y-H6U" firstAttribute="trailing" secondItem="QYH-D6-ooD" secondAttribute="trailing" constant="20" id="nnh-Yc-VdO"/>
+                            <constraint firstAttribute="bottom" secondItem="QYH-D6-ooD" secondAttribute="bottom" constant="303" id="xcd-M3-JEc"/>
+                            <constraint firstItem="IYh-mZ-Jco" firstAttribute="top" secondItem="QYH-D6-ooD" secondAttribute="bottom" constant="23" id="yEI-HK-wJd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eVu-oG-xD3"/>
@@ -935,6 +943,7 @@
                         <outlet property="carbsPctLabel" destination="okj-uo-wPV" id="Dsx-og-WHu"/>
                         <outlet property="fatsGrLabel" destination="b5G-G1-cW8" id="zqn-kH-da9"/>
                         <outlet property="fatsPctLabel" destination="IYh-mZ-Jco" id="fSi-zA-YE4"/>
+                        <outlet property="pieChart" destination="QYH-D6-ooD" id="eHA-F9-UIw"/>
                         <outlet property="proteinGrLabel" destination="b2f-fA-2pG" id="Z01-va-Yg1"/>
                         <outlet property="proteinPctLabel" destination="F7b-zS-zqv" id="bx2-bO-Ie0"/>
                         <outlet property="resultsLabel" destination="g9b-eK-Ijg" id="gcG-z0-pEz"/>
