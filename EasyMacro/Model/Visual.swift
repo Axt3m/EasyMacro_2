@@ -12,10 +12,10 @@ struct Visual {
     
     static func buttonShadowAndFont(to button: UIButton, text textInput: String? = nil, size sizeInput: Int? = nil) {
             
-            button.layer.shadowRadius = 2
-            button.layer.shadowColor = UIColor.black.cgColor
-            button.layer.shadowOpacity = 0.2
-            button.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        button.layer.shadowRadius = 2
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOpacity = 0.2
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
             
         if let attrFont = UIFont(name: K.nextButtonPolice, size: CGFloat(sizeInput ?? 18)) {
             let title = textInput ?? K.nextButtonTitle
