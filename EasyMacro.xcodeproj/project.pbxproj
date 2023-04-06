@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56C06DC3D534C671FDBCA4E2 /* Pods_EasyMacro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F373415B30324F144B5C4A33 /* Pods_EasyMacro.framework */; };
 		C60A1F4029BF28CB0061F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F3F29BF28CB0061F3BC /* AppDelegate.swift */; };
 		C60A1F4229BF28CB0061F3BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F4129BF28CB0061F3BC /* SceneDelegate.swift */; };
 		C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60A1F4329BF28CB0061F3BC /* WelcomeViewController.swift */; };
@@ -18,6 +19,8 @@
 		C60A1F5D29BF37F70061F3BC /* Jost-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */; };
 		C60A1F5E29BF37F70061F3BC /* Jost-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */; };
 		C60A1F5F29BF37F70061F3BC /* Jost-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */; };
+		C626CEB629DDA39D00E97E5B /* DeficitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626CEB529DDA39D00E97E5B /* DeficitInfo.swift */; };
+		C626CEB829DDB03200E97E5B /* FatsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626CEB729DDB03200E97E5B /* FatsInfo.swift */; };
 		C665CD8A29D199E30050CD57 /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8929D199E30050CD57 /* SportsViewController.swift */; };
 		C665CD8C29D1E99B0050CD57 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8B29D1E99B0050CD57 /* GoalsViewController.swift */; };
 		C665CD8E29D1ECEA0050CD57 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD8D29D1ECEA0050CD57 /* ResultsViewController.swift */; };
@@ -25,13 +28,14 @@
 		C665CD9229D1F4E30050CD57 /* CalculatorMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD9129D1F4E30050CD57 /* CalculatorMacro.swift */; };
 		C665CD9429D1FB830050CD57 /* UserChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C665CD9329D1FB830050CD57 /* UserChoices.swift */; };
 		C67D3DEB29C1BD8A00DECB3A /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */; };
-		C6808A7C29D4347C005E7D91 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6808A7B29D4347C005E7D91 /* Test.swift */; };
+		C6808A7C29D4347C005E7D91 /* Unwrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6808A7B29D4347C005E7D91 /* Unwrapping.swift */; };
 		C682DBF729C1EC7700B41A0E /* ActivityLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF629C1EC7700B41A0E /* ActivityLevelViewController.swift */; };
 		C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682DBF829C1FE3500B41A0E /* Visual.swift */; };
 		C6836FDF29D721ED006CF57D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6836FDE29D721ED006CF57D /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E94C634D7E0E0AC910BB390 /* Pods-EasyMacro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMacro.debug.xcconfig"; path = "Target Support Files/Pods-EasyMacro/Pods-EasyMacro.debug.xcconfig"; sourceTree = "<group>"; };
 		C60A1F3C29BF28CB0061F3BC /* EasyMacro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyMacro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A1F3F29BF28CB0061F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C60A1F4129BF28CB0061F3BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,8 @@
 		C60A1F5A29BF37F70061F3BC /* Jost-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Bold.ttf"; sourceTree = "<group>"; };
 		C60A1F5B29BF37F70061F3BC /* Jost-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Light.ttf"; sourceTree = "<group>"; };
 		C60A1F5C29BF37F70061F3BC /* Jost-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-SemiBold.ttf"; sourceTree = "<group>"; };
+		C626CEB529DDA39D00E97E5B /* DeficitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeficitInfo.swift; sourceTree = "<group>"; };
+		C626CEB729DDB03200E97E5B /* FatsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FatsInfo.swift; sourceTree = "<group>"; };
 		C665CD8929D199E30050CD57 /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		C665CD8B29D1E99B0050CD57 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		C665CD8D29D1ECEA0050CD57 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -52,10 +58,12 @@
 		C665CD9129D1F4E30050CD57 /* CalculatorMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMacro.swift; sourceTree = "<group>"; };
 		C665CD9329D1FB830050CD57 /* UserChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChoices.swift; sourceTree = "<group>"; };
 		C67D3DEA29C1BD8A00DECB3A /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
-		C6808A7B29D4347C005E7D91 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		C6808A7B29D4347C005E7D91 /* Unwrapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unwrapping.swift; sourceTree = "<group>"; };
 		C682DBF629C1EC7700B41A0E /* ActivityLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLevelViewController.swift; sourceTree = "<group>"; };
 		C682DBF829C1FE3500B41A0E /* Visual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visual.swift; sourceTree = "<group>"; };
 		C6836FDE29D721ED006CF57D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		D88983949B59038357AAEE2C /* Pods-EasyMacro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyMacro.release.xcconfig"; path = "Target Support Files/Pods-EasyMacro/Pods-EasyMacro.release.xcconfig"; sourceTree = "<group>"; };
+		F373415B30324F144B5C4A33 /* Pods_EasyMacro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyMacro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +71,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C06DC3D534C671FDBCA4E2 /* Pods_EasyMacro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC33340CB6A7969505715117 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E94C634D7E0E0AC910BB390 /* Pods-EasyMacro.debug.xcconfig */,
+				D88983949B59038357AAEE2C /* Pods-EasyMacro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C60A1F3329BF28CB0061F3BC = {
 			isa = PBXGroup;
 			children = (
 				C60A1F3E29BF28CB0061F3BC /* EasyMacro */,
 				C60A1F3D29BF28CB0061F3BC /* Products */,
+				AC33340CB6A7969505715117 /* Pods */,
+				EC5B63E32547C022FA021A75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +144,8 @@
 				C665CD8B29D1E99B0050CD57 /* GoalsViewController.swift */,
 				C6836FDE29D721ED006CF57D /* PreferencesViewController.swift */,
 				C665CD8D29D1ECEA0050CD57 /* ResultsViewController.swift */,
+				C626CEB529DDA39D00E97E5B /* DeficitInfo.swift */,
+				C626CEB729DDB03200E97E5B /* FatsInfo.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,9 +164,17 @@
 				C682DBF829C1FE3500B41A0E /* Visual.swift */,
 				C665CD9129D1F4E30050CD57 /* CalculatorMacro.swift */,
 				C665CD9329D1FB830050CD57 /* UserChoices.swift */,
-				C6808A7B29D4347C005E7D91 /* Test.swift */,
+				C6808A7B29D4347C005E7D91 /* Unwrapping.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EC5B63E32547C022FA021A75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F373415B30324F144B5C4A33 /* Pods_EasyMacro.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C60A1F5029BF28CE0061F3BC /* Build configuration list for PBXNativeTarget "EasyMacro" */;
 			buildPhases = (
+				1F292CDD80A9313FC0FC3A00 /* [CP] Check Pods Manifest.lock */,
 				C60A1F3829BF28CB0061F3BC /* Sources */,
 				C60A1F3929BF28CB0061F3BC /* Frameworks */,
 				C60A1F3A29BF28CB0061F3BC /* Resources */,
+				223412B1CB9AD3B8DEFE46E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,16 +249,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F292CDD80A9313FC0FC3A00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyMacro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		223412B1CB9AD3B8DEFE46E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyMacro/Pods-EasyMacro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyMacro/Pods-EasyMacro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyMacro/Pods-EasyMacro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C60A1F3829BF28CB0061F3BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C626CEB629DDA39D00E97E5B /* DeficitInfo.swift in Sources */,
 				C60A1F4429BF28CB0061F3BC /* WelcomeViewController.swift in Sources */,
 				C682DBF929C1FE3500B41A0E /* Visual.swift in Sources */,
 				C682DBF729C1EC7700B41A0E /* ActivityLevelViewController.swift in Sources */,
+				C626CEB829DDB03200E97E5B /* FatsInfo.swift in Sources */,
 				C6836FDF29D721ED006CF57D /* PreferencesViewController.swift in Sources */,
-				C6808A7C29D4347C005E7D91 /* Test.swift in Sources */,
+				C6808A7C29D4347C005E7D91 /* Unwrapping.swift in Sources */,
 				C665CD8E29D1ECEA0050CD57 /* ResultsViewController.swift in Sources */,
 				C665CD9229D1F4E30050CD57 /* CalculatorMacro.swift in Sources */,
 				C665CD9429D1FB830050CD57 /* UserChoices.swift in Sources */,
@@ -378,6 +454,7 @@
 		};
 		C60A1F5129BF28CE0061F3BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E94C634D7E0E0AC910BB390 /* Pods-EasyMacro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -406,6 +483,7 @@
 		};
 		C60A1F5229BF28CE0061F3BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D88983949B59038357AAEE2C /* Pods-EasyMacro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

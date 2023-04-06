@@ -23,45 +23,40 @@ class GenderViewController: UIViewController {
         super.viewDidLoad()
         
         progressBar.progress = 1/6
-        
-        Visual.customLabel(to: question1Label, text: K.genderQuestion, font: K.questionPolice, size: 24)
-        
-        Visual.customButton(to: button1, text: K.genderMale, isDefaultButton: true) {defaultTextButton in
-            self.userGender = defaultTextButton
-        }
-        
-        Visual.customButton(to: button2, text: K.genderFemale)
-        
-        Visual.buttonShadowAndFont(to: nextButton)
+        customScreen()
         
     }
     
-    @IBAction func button1Pressed(_ sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
         Visual.selectedButton(sender) {textButton in
             self.userGender = textButton
         }
-        Visual.deselectButtons(button2)
-    }
-    
-    @IBAction func button2Pressed(_ sender: UIButton) {
-        Visual.selectedButton(sender) {textButton in
-            self.userGender = textButton
+        
+        if(sender == button1) {
+            Visual.deselectButton(button2)
+        } else {
+            Visual.deselectButton(button1)
         }
-        Visual.deselectButtons(button1)
-    }
-    
-    
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: nextButton)
-
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "genderToWeight" {
+        userChoices.gender = userGender
+        
+        if segue.identifier == Constants.genderToWeight {
             let weightVC = segue.destination as! WeightViewController
-            weightVC.gender = userChoices.getGender(with: userGender)
+            weightVC.userChoices = userChoices
         }
+    }
+    
+    private func customScreen(){
+        
+        Visual.customLabel(to: question1Label, text: Constants.genderQuestion, font: Constants.questionPolice, size: 27)
+        Visual.customButton(to: button1, text: Constants.genderMale, isDefaultButton: true) {defaultTextButton in
+            self.userGender = defaultTextButton
+        }
+        Visual.customButton(to: button2, text: Constants.genderFemale)
+        Visual.buttonShadowAndFont(to: nextButton)
+        
     }
     
 

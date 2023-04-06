@@ -18,38 +18,35 @@ class PreferencesViewController: UIViewController {
     
     public var userPreferences: String = ""
     
-    var userChoices = UserChoices()
-    var gender: String?
-    var weight: Int?
-    var activity: String?
-    var sports: String?
-    var goals: String?
-    
+    var userChoices: UserChoices!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        guard userChoices != nil else{
+            fatalError()
+        }
         
         progressBar.progress = 1.0
         
-        Visual.customLabel(to: question6Label, text: K.preferencesQuestion, font: K.questionPolice, size: 24)
-        
-        Visual.customButton(to: button1, text: K.preferencesAnswer1, isDefaultButton: true) {defaultTextButton in
-            self.userPreferences = defaultTextButton
-        }
-        
-        Visual.customButton(to: button2, text: K.preferencesAnswer2)
-
-        
-        Visual.buttonShadowAndFont(to: nextButton, text: K.calculateButtonTitle)
+        customScreen()
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        userChoices.preferences = userPreferences
+        if segue.identifier == Constants.preferencesToResults {
+            let resultsVC = segue.destination as! ResultsViewController
+            resultsVC.userChoices = userChoices
+        }
+    }
     
     @IBAction func button1Pressed(_ sender: UIButton) {
         Visual.selectedButton(sender) {textButton in
             self.userPreferences = textButton
         }
-        Visual.deselectButtons(button2)
+        Visual.deselectButton(button2)
     }
     
     
@@ -58,28 +55,24 @@ class PreferencesViewController: UIViewController {
         Visual.selectedButton(sender) {textButton in
             self.userPreferences = textButton
         }
-        Visual.deselectButtons(button1)
+        Visual.deselectButton(button1)
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: nextButton, text: K.calculateButtonTitle)
+    }
 
+    
+    private func customScreen(){
+        Visual.customLabel(to: question6Label, text: Constants.preferencesQuestion, font: Constants.questionPolice, size: 27)
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "preferencesToResults" {
-            let resultsVC = segue.destination as! ResultsViewController
-            resultsVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
-            resultsVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
-            resultsVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
-            resultsVC.sports = userChoices.getActivity(with: Test.unwrapOptionalString(sports))
-            resultsVC.goals = userChoices.getActivity(with: Test.unwrapOptionalString(goals))
-            resultsVC.preferences = userChoices.getActivity(with: userPreferences)
-            
+        Visual.customButton(to: button1, text: Constants.preferencesAnswer1, isDefaultButton: true) {defaultTextButton in
+            self.userPreferences = defaultTextButton
         }
+        
+        Visual.customButton(to: button2, text: Constants.preferencesAnswer2)
+        
+        Visual.buttonShadowAndFont(to: nextButton, text: Constants.calculateButtonTitle)
     }
-    
     
     
 }

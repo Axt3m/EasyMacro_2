@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct K {
+struct Constants {
     
     //MARK: - WelcomeVC
     
@@ -36,9 +36,9 @@ struct K {
     static let defaultWeight = 65
     static let minWeight = 20
     static let maxWeight = 300
-    static let kgMetrics = "Kg"
+    static let kgMetrics = "kg"
     
-    static let kgPolice = "Jost-SemiBold"
+    static let kgPolice = "Jost-Light"
     
     //MARK: - Answers
     
@@ -65,6 +65,16 @@ struct K {
     
     static let answerPolice = "Jost-Light"
     
+    //MARK: - Segue Identifiers
+    
+    static let genderToWeight = "genderToWeight"
+    static let weightToActivity = "weightToActivity"
+    static let activityToSports = "activityToSports"
+    static let sportsToGoals = "sportsToGoals"
+    static let goalsToPreferences = "goalsToPreferences"
+    static let preferencesToResults = "preferencesToResults"
+    
+    
     
     //MARK: - Other constants
     
@@ -75,7 +85,45 @@ struct K {
     
     static let nextButtonColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
     
-    static let resultsTitle = "Your Daily \nNeeds"
+    static let conditionWeight1 = "70"
+    static let conditionWeight2 = "20"
+    static let conditionWeight3 = "300"
+    
+    static let allowedCharacters = "0123456789"
+    
+    //MARK: - Results screen
+    
+    static let resultsTitle = "Well done!"
+    static let resultsTitle2 = "Here are your daily needs:"
+    static let proteinLabel = "Protein"
+    static let carbsLabel = "Carbs"
+    static let fatsLabel = "Fats"
+    
+    static let proteinColor = UIColor(red: 240.0/255.0, green: 109.0/255.0, blue: 147.0/255.0, alpha: 1)
+    static let carbsColor = UIColor(red: 93.0/255.0, green: 220.0/255.0, blue: 223.0/255.0, alpha: 1)
+    static let fatsColor = UIColor(red: 125.0/255.0, green: 190.0/255.0, blue: 254.0/255.0, alpha: 1)
+    
+    //UIColor(red: 176.0/255.0, green: 173.0/255.0, blue: 226.0/255.0, alpha: 1)
+    
+    static let formatPct = "%.1f %%"
+    
+    static let recalculateButtonTitle = "Recalculate"
+    
+    //MARK: - Deficit Info
+    
+    static let smallDeficitTitle = "Small Deficit"
+    static let moderateDeficitTitle = "Moderate Deficit"
+    static let largeDeficitTitle = "Large Deficit"
+    
+    static let smallDeficitInfoLabel = "• A small deficit involves less overall restriction, which can lead to better long-term adherence (and results!). \n• Keep in mind that progress is slower than with a moderate or large deficit. \n• This works for someone who's already lean with little fat to loose and has already a macro-tracking experience."
+    static let moderateDeficitInfoLabel = "• A moderate deficit is considered as a faster average fat loss for most people, without requiring a massive food restriction. \n• Keep in mind that your body may 'fight back' to some degree with hormonal and metabolic changes. \n• This works for anyone looking for slow and steady progress without feeling incredibly restricted. The majority of the population will work best on a moderate deficit."
+    static let largeDeficitInfoLabel = "• A large deficit is the maximal rate of fat loss and quick initial drop in weight. \n• Keep in mind that there is very little food flexibility and it is common to feel very restricted and hungry, which can lead to low long-term adherence. For someone who's very active, it can negatively impact the training/recovery. \n• This works for anyone who's impatient, motivated by quick weight loss and/or who must lose fat for a specific event in a short timeframe."
+
+    //MARK: - Fats Info
+    
+    static let fatsTitleLabel = "Fats or Carbs ?"
+    
+    static let fatsInfoLabel = "Fat is an essential nutrient, which means that it is crucial for normal body function, and you could not live without it. It supplies you with energy and also makes it possible for other nutrients in your body to do their jobs. \n\nThe specific amount of fat that is right for you will depend on your preferences. Do you tend to prefer higher-fat foods or higher-carb foods ? \n\nThink about your current daily food intake and consider whether you tend to gravitate towards fats or carbs."
     
     //MARK: - Multiplier constants
     

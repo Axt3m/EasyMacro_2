@@ -22,32 +22,32 @@ struct CalculatorMacro {
     var caloriesFromCarbs: Int = 0
     var caloriesFromFats: Int = 0
     
-    var proteinPercentage: Double = 0.0
+    var proteinPct: Double = 0.0
     var carbsPct: Double = 0.0
     var fatsPct: Double = 0.0
     
     mutating func baselineCalories() -> Int {
         let weightLbs = Int(Double(userChoices.weight!) * 2.2)
         
-        if userChoices.gender == K.genderMale {
-            if userChoices.activity == K.activityAnswer1 {
-                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer1
-            } else if userChoices.activity == K.activityAnswer2 {
-                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer2
-            } else if userChoices.activity == K.activityAnswer3 {
-                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer3
+        if userChoices.gender == Constants.genderMale {
+            if userChoices.activity == Constants.activityAnswer1 {
+                totalCalories = weightLbs * Constants.multiplierCaloriesMaleActivityAnswer1
+            } else if userChoices.activity == Constants.activityAnswer2 {
+                totalCalories = weightLbs * Constants.multiplierCaloriesMaleActivityAnswer2
+            } else if userChoices.activity == Constants.activityAnswer3 {
+                totalCalories = weightLbs * Constants.multiplierCaloriesMaleActivityAnswer3
             } else {
-                totalCalories = weightLbs * K.multiplierCaloriesMaleActivityAnswer4
+                totalCalories = weightLbs * Constants.multiplierCaloriesMaleActivityAnswer4
             }
         } else {
-            if userChoices.activity == K.activityAnswer1 {
-                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer1
-            } else if userChoices.activity == K.activityAnswer2 {
-                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer2
-            } else if userChoices.activity == K.activityAnswer3 {
-                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer3
+            if userChoices.activity == Constants.activityAnswer1 {
+                totalCalories = weightLbs * Constants.multiplierCaloriesFemaleActivityAnswer1
+            } else if userChoices.activity == Constants.activityAnswer2 {
+                totalCalories = weightLbs * Constants.multiplierCaloriesFemaleActivityAnswer2
+            } else if userChoices.activity == Constants.activityAnswer3 {
+                totalCalories = weightLbs * Constants.multiplierCaloriesFemaleActivityAnswer3
             } else {
-                totalCalories = weightLbs * K.multiplierCaloriesFemaleActivityAnswer4
+                totalCalories = weightLbs * Constants.multiplierCaloriesFemaleActivityAnswer4
             }
         }
         
@@ -58,21 +58,21 @@ struct CalculatorMacro {
     mutating func caloriesWithDeficit() -> Int {
         totalCalories = baselineCalories()
         
-        if userChoices.gender == K.genderMale {
-            if userChoices.goals == K.goalsAnswer1 {
-                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitMaleGoalsAnswer1))
-            } else if userChoices.goals == K.goalsAnswer2 {
-                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitMaleGoalsAnswer2))
+        if userChoices.gender == Constants.genderMale {
+            if userChoices.goals == Constants.goalsAnswer1 {
+                deficitCalories = Int(Double(totalCalories) * (1 - Constants.deficitMaleGoalsAnswer1))
+            } else if userChoices.goals == Constants.goalsAnswer2 {
+                deficitCalories = Int(Double(totalCalories) * (1 - Constants.deficitMaleGoalsAnswer2))
             } else {
-                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitMaleGoalsAnswer3))
+                deficitCalories = Int(Double(totalCalories) * (1 - Constants.deficitMaleGoalsAnswer3))
             }
         } else {
-            if userChoices.goals == K.goalsAnswer1 {
-                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitFemaleGoalsAnswer1))
-            } else if userChoices.goals == K.goalsAnswer2 {
-                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitFemaleGoalsAnswer2))
+            if userChoices.goals == Constants.goalsAnswer1 {
+                deficitCalories = Int(Double(totalCalories) * (1 - Constants.deficitFemaleGoalsAnswer1))
+            } else if userChoices.goals == Constants.goalsAnswer2 {
+                deficitCalories = Int(Double(totalCalories) * (1 - Constants.deficitFemaleGoalsAnswer2))
             } else {
-                deficitCalories = Int(Double(totalCalories) * (1 - K.deficitFemaleGoalsAnswer3))
+                deficitCalories = Int(Double(totalCalories) * (1 - Constants.deficitFemaleGoalsAnswer3))
             }
         }
         
@@ -82,31 +82,32 @@ struct CalculatorMacro {
     mutating func proteinRequirement() -> Int {
         let weightLbs = Int(Double(userChoices.weight!) * 2.2)
         
-        if userChoices.gender == K.genderMale {
-            if userChoices.sport == K.sportAnswer1{
-                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer1)
-            } else if userChoices.sport == K.sportAnswer2{
-                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer2)
-            } else if userChoices.sport == K.sportAnswer3{
-                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer3)
-            } else if userChoices.sport == K.sportAnswer4{
-                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer4)
+        if userChoices.gender == Constants.genderMale {
+            if userChoices.sport == Constants.sportAnswer1{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinMaleSportAnswer1)
+            } else if userChoices.sport == Constants.sportAnswer2{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinMaleSportAnswer2)
+            } else if userChoices.sport == Constants.sportAnswer3{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinMaleSportAnswer3)
+            } else if userChoices.sport == Constants.sportAnswer4{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinMaleSportAnswer4)
             } else {
-                proteinAmount = Int(Double(weightLbs) * K.proteinMaleSportAnswer5)
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinMaleSportAnswer5)
             }
         } else {
-            if userChoices.sport == K.sportAnswer1{
-                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer1)
-            } else if userChoices.sport == K.sportAnswer2{
-                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer2)
-            } else if userChoices.sport == K.sportAnswer3{
-                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer3)
-            } else if userChoices.sport == K.sportAnswer4{
-                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer4)
+            if userChoices.sport == Constants.sportAnswer1{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinFemaleSportAnswer1)
+            } else if userChoices.sport == Constants.sportAnswer2{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinFemaleSportAnswer2)
+            } else if userChoices.sport == Constants.sportAnswer3{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinFemaleSportAnswer3)
+            } else if userChoices.sport == Constants.sportAnswer4{
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinFemaleSportAnswer4)
             } else {
-                proteinAmount = Int(Double(weightLbs) * K.proteinFemaleSportAnswer5)
+                proteinAmount = Int(Double(weightLbs) * Constants.proteinFemaleSportAnswer5)
             }
         }
+        
         
         return proteinAmount
     }
@@ -114,20 +115,20 @@ struct CalculatorMacro {
     mutating func fatsRequirement() -> Int {
         totalCalories = caloriesWithDeficit()
         
-        if userChoices.gender == K.genderMale {
-            if userChoices.preferences == K.preferencesAnswer1 {
-                fatsAmount = Int(Double(totalCalories) * K.preferencesMaleAnswer1) / 9
-            } else if userChoices.preferences == K.preferencesAnswer2 {
-                fatsAmount = Int(Double(totalCalories) * K.preferencesMaleAnswer2) / 9
+        if userChoices.gender == Constants.genderMale {
+            if userChoices.preferences == Constants.preferencesAnswer1 {
+                fatsAmount = Int(Double(totalCalories) * Constants.preferencesMaleAnswer1) / 9
+            } else if userChoices.preferences == Constants.preferencesAnswer2 {
+                fatsAmount = Int(Double(totalCalories) * Constants.preferencesMaleAnswer2) / 9
             }
         } else {
-            if userChoices.preferences == K.preferencesAnswer1 {
-                fatsAmount = Int(Double(totalCalories) * K.preferencesFemaleAnswer1) / 9
-            } else if userChoices.preferences == K.preferencesAnswer2 {
-                fatsAmount = Int(Double(totalCalories) * K.preferencesFemaleAnswer2) / 9
+            if userChoices.preferences == Constants.preferencesAnswer1 {
+                fatsAmount = Int(Double(totalCalories) * Constants.preferencesFemaleAnswer1) / 9
+            } else if userChoices.preferences == Constants.preferencesAnswer2 {
+                fatsAmount = Int(Double(totalCalories) * Constants.preferencesFemaleAnswer2) / 9
             }
         }
-        
+ 
         return fatsAmount
     }
     
@@ -137,15 +138,16 @@ struct CalculatorMacro {
         caloriesFromProtein = proteinRequirement() * 4
         caloriesFromCarbs = totalCalories - (caloriesFromFats + caloriesFromProtein)
         
+        fatsPct = (Double(caloriesFromFats) / Double(totalCalories)) * 100
+        proteinPct = (Double(caloriesFromProtein) / Double(totalCalories)) * 100
+        carbsPct = (Double(caloriesFromCarbs) / Double(totalCalories)) * 100
+        
+        
         return caloriesFromCarbs / 4
     }
     
-//    mutating func proteinPercentage() -> Double {
-//        totalCalories = caloriesWithDeficit()
-//        caloriesFromProtein = proteinRequirement() * 4
-//        return (caloriesFromProtein/totalCalories) * 100
-//    }
-//    
+
+    
     
     
     
