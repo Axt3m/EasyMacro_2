@@ -18,7 +18,7 @@ struct Visual {
             button.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
             
         if let attrFont = UIFont(name: K.nextButtonPolice, size: CGFloat(sizeInput ?? 18)) {
-            let title = textInput ?? K.nextButtonTitle //button.titleLabel!.text!
+            let title = textInput ?? K.nextButtonTitle
             let attrTitle = NSAttributedString(string: title, attributes: [NSAttributedString.Key.font: attrFont])
             
             button.setAttributedTitle(attrTitle, for: UIControl.State.normal)

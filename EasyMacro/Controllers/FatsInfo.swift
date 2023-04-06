@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class FatsInfo: UIViewController {
     
     
@@ -25,7 +24,6 @@ class FatsInfo: UIViewController {
         Visual.customLabel(to: fatsTitle, text: K.fatsTitleLabel, font: K.welcomeTitlePolice, size: 28)
         
         Visual.customLabel(to: fatsInfoLabel, text: K.fatsInfoLabel, font: K.welcomeTextPolice1, size: 15)
-       
     }
     
 

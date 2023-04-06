@@ -65,6 +65,16 @@ struct K {
     
     static let answerPolice = "Jost-Light"
     
+    //MARK: - Segue Identifiers
+    
+    static let genderToWeight = "genderToWeight"
+    static let weightToActivity = "weightToActivity"
+    static let activityToSports = "activityToSports"
+    static let sportsToGoals = "sportsToGoals"
+    static let goalsToPreferences = "goalsToPreferences"
+    static let preferencesToResults = "preferencesToResults"
+    
+    
     
     //MARK: - Other constants
     
@@ -74,6 +84,12 @@ struct K {
     static let nextButtonPolice = "Jost-Bold"
     
     static let nextButtonColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
+    
+    static let conditionWeight1 = "70"
+    static let conditionWeight2 = "20"
+    static let conditionWeight3 = "300"
+    
+    static let allowedCharacters = "0123456789"
     
     //MARK: - Results screen
     

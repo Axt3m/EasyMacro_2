@@ -23,16 +23,7 @@ class GenderViewController: UIViewController {
         super.viewDidLoad()
         
         progressBar.progress = 1/6
-        
-        Visual.customLabel(to: question1Label, text: K.genderQuestion, font: K.questionPolice, size: 27)
-        
-        Visual.customButton(to: button1, text: K.genderMale, isDefaultButton: true) {defaultTextButton in
-            self.userGender = defaultTextButton
-        }
-        
-        Visual.customButton(to: button2, text: K.genderFemale)
-        
-        Visual.buttonShadowAndFont(to: nextButton)
+        customScreen()
         
     }
     
@@ -52,16 +43,24 @@ class GenderViewController: UIViewController {
     
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: nextButton)
-
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "genderToWeight" {
+        if segue.identifier == K.genderToWeight {
             let weightVC = segue.destination as! WeightViewController
             weightVC.gender = userChoices.getGender(with: userGender)
         }
+    }
+    
+    private func customScreen(){
+        
+        Visual.customLabel(to: question1Label, text: K.genderQuestion, font: K.questionPolice, size: 27)
+        Visual.customButton(to: button1, text: K.genderMale, isDefaultButton: true) {defaultTextButton in
+            self.userGender = defaultTextButton
+        }
+        Visual.customButton(to: button2, text: K.genderFemale)
+        Visual.buttonShadowAndFont(to: nextButton)
+        
     }
     
 

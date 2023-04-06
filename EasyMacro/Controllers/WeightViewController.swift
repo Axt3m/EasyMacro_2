@@ -10,16 +10,13 @@ import UIKit
 
 class WeightViewController: UIViewController {
     
-    
     @IBOutlet weak var question2Label: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var kgLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    
     @IBOutlet weak var weightTextField: UITextField!
     
-    
-    public var userWeight: Int = K.defaultWeight
+    public var userWeight: Int = 0
     
     var userChoices = UserChoices()
     var gender: String?
@@ -30,43 +27,29 @@ class WeightViewController: UIViewController {
         progressBar.progress = 2/6
         weightTextField.keyboardType = .numberPad
         weightTextField.delegate = self
-        
         weightTextField.font = UIFont(name: K.questionPolice, size: 40)
         
-        Visual.customLabel(to: question2Label, text: K.weightQuestion, font: K.questionPolice, size: 27)
-        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 18)
-        Visual.buttonShadowAndFont(to: nextButton)
+        customScreen()
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: nextButton)
-        
-        userWeight = Test.stringToNumber(weightTextField)
-        print(userWeight)
-        
-        if userWeight == 0 {
-            weightTextField.text = ""
-            weightTextField.placeholder = "70"
-        } else if userWeight < 20 {
-            weightTextField.text = ""
-            weightTextField.placeholder = "20"
-        } else if userWeight >= 300 {
-            weightTextField.text = ""
-            weightTextField.placeholder = "150"
-        } else {
-            self.performSegue(withIdentifier: "weightToActivity", sender: self)
+        if userWeight != 0 {
+            self.performSegue(withIdentifier: K.weightToActivity, sender: self)
         }
-        
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "weightToActivity" {
+        if segue.identifier == K.weightToActivity {
             let activityVC = segue.destination as! ActivityLevelViewController
             activityVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
             activityVC.weight = userChoices.getWeight(with: userWeight)
         }
+    }
+    
+    private func customScreen(){
+        Visual.customLabel(to: question2Label, text: K.weightQuestion, font: K.questionPolice, size: 27)
+        Visual.customLabel(to: kgLabel, text: K.kgMetrics, font: K.kgPolice, size: 18)
+        Visual.buttonShadowAndFont(to: nextButton)
     }
 }
 
@@ -76,7 +59,7 @@ extension WeightViewController: UITextFieldDelegate {
         if textField == weightTextField {
             let maxNumbers = 3
             let newLength: Int = textField.text!.count + string.count - range.length
-            let allowedCharacters = CharacterSet(charactersIn: "0123456789")
+            let allowedCharacters = CharacterSet(charactersIn: K.allowedCharacters)
             let characterSet = CharacterSet(charactersIn: string)
             return allowedCharacters.isSuperset(of: characterSet) && (newLength <= maxNumbers)
         }
@@ -87,7 +70,26 @@ extension WeightViewController: UITextFieldDelegate {
         return weightTextField.resignFirstResponder()
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        conditionWeight(with: textField)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    private func conditionWeight(with textField: UITextField){
+        userWeight = Test.stringToNumber(textField)
+        if userWeight == 0 {
+            weightTextField.text = ""
+            weightTextField.placeholder = K.conditionWeight1
+        } else if userWeight < 20 {
+            weightTextField.text = ""
+            weightTextField.placeholder = K.conditionWeight2
+        } else if userWeight > 300 {
+            weightTextField.text = ""
+            weightTextField.placeholder = K.conditionWeight3
+        }
+    }
+    
 }

@@ -29,20 +29,23 @@ class SportsViewController: UIViewController {
     var activity: String?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         progressBar.progress = 4/6
         
-        Visual.customLabel(to: question4Label, text: K.sportQuestion, font: K.questionPolice, size: 27)
+        customScreen()
         
-        Visual.customButton(to: button1, text: K.sportAnswer1, isDefaultButton: true) {text in self.userSports = text}
-        Visual.customButton(to: button2, text: K.sportAnswer2)
-        Visual.customButton(to: button3, text: K.sportAnswer3)
-        Visual.customButton(to: button4, text: K.sportAnswer4)
-        Visual.customButton(to: button5, text: K.sportAnswer5)
-        
-        Visual.buttonShadowAndFont(to: nextButton)
-        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == K.sportsToGoals {
+            let goalsVC = segue.destination as! GoalsViewController
+            goalsVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
+            goalsVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
+            goalsVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
+            goalsVC.sports = userChoices.getActivity(with: userSports)
+        }
     }
     
     @IBAction func button1Pressed(_ sender: UIButton) {
@@ -82,20 +85,18 @@ class SportsViewController: UIViewController {
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        Visual.buttonShadowAndFont(to: nextButton)
- 
-        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "sportToGoals" {
-            let goalsVC = segue.destination as! GoalsViewController
-            goalsVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
-            goalsVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
-            goalsVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
-            goalsVC.sports = userChoices.getActivity(with: userSports)
-            
-        }
+    private func customScreen() {
+        Visual.customLabel(to: question4Label, text: K.sportQuestion, font: K.questionPolice, size: 27)
+        
+        Visual.customButton(to: button1, text: K.sportAnswer1, isDefaultButton: true) {text in self.userSports = text}
+        Visual.customButton(to: button2, text: K.sportAnswer2)
+        Visual.customButton(to: button3, text: K.sportAnswer3)
+        Visual.customButton(to: button4, text: K.sportAnswer4)
+        Visual.customButton(to: button5, text: K.sportAnswer5)
+        
+        Visual.buttonShadowAndFont(to: nextButton)
     }
     
     
