@@ -58,10 +58,6 @@ class PreferencesViewController: UIViewController {
         Visual.deselectButton(button1)
     }
     
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-    }
-
-    
     private func customScreen(){
         Visual.customLabel(to: question6Label, text: Constants.preferencesQuestion, font: Constants.questionPolice, size: 27)
         

@@ -66,10 +66,7 @@ class SportsViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-    }
-    
+
     private func customScreen() {
         Visual.customLabel(to: question4Label, text: Constants.sportQuestion, font: Constants.questionPolice, size: 27)
         

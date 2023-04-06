@@ -61,9 +61,6 @@ class GoalsViewController: UIViewController {
         
     }
     
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-    }
-    
     private func customScreen(){
         Visual.customLabel(to: question5Label, text: Constants.goalsQuestion, font: Constants.questionPolice, size: 27)
     

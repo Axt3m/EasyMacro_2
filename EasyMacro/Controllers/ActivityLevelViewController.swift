@@ -61,9 +61,6 @@ class ActivityLevelViewController: UIViewController {
         
     }
     
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
-    }
-    
     private func customScreen(){
         Visual.customLabel(to: question3Label, text: Constants.activityQuestion, font: Constants.questionPolice, size: 27)
         Visual.buttonShadowAndFont(to: nextButton)
