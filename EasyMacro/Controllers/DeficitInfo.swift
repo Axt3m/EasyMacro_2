@@ -25,13 +25,13 @@ class DeficitInfo: UIViewController {
     }
     
     private func customScreen() {
-        Visual.customLabel(to: smallDeficitTitle, text: K.smallDeficitTitle, font: K.welcomeTitlePolice, size: 25)
-        Visual.customLabel(to: moderateDeficitTitle, text: K.moderateDeficitTitle, font: K.welcomeTitlePolice, size: 25)
-        Visual.customLabel(to: largeDeficitTitle, text: K.largeDeficitTitle, font: K.welcomeTitlePolice, size: 25)
+        Visual.customLabel(to: smallDeficitTitle, text: Constants.smallDeficitTitle, font: Constants.welcomeTitlePolice, size: 25)
+        Visual.customLabel(to: moderateDeficitTitle, text: Constants.moderateDeficitTitle, font: Constants.welcomeTitlePolice, size: 25)
+        Visual.customLabel(to: largeDeficitTitle, text: Constants.largeDeficitTitle, font: Constants.welcomeTitlePolice, size: 25)
         
-        Visual.customLabel(to: smallDeficitInfo, text: K.smallDeficitInfoLabel, font: K.welcomeTextPolice1, size: 15)
-        Visual.customLabel(to: moderateDeficitInfo, text: K.moderateDeficitInfoLabel, font: K.welcomeTextPolice1, size: 15)
-        Visual.customLabel(to: largeDeficitInfo, text: K.largeDeficitInfoLabel, font: K.welcomeTextPolice1, size: 15)
+        Visual.customLabel(to: smallDeficitInfo, text: Constants.smallDeficitInfoLabel, font: Constants.welcomeTextPolice1, size: 15)
+        Visual.customLabel(to: moderateDeficitInfo, text: Constants.moderateDeficitInfoLabel, font: Constants.welcomeTextPolice1, size: 15)
+        Visual.customLabel(to: largeDeficitInfo, text: Constants.largeDeficitInfoLabel, font: Constants.welcomeTextPolice1, size: 15)
     }
     
 

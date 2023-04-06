@@ -34,13 +34,7 @@ class ResultsViewController: UIViewController {
     
     var numberOfDataEntries = [PieChartDataEntry]()
     
-    var userChoices = UserChoices()
-    var gender: String?
-    var weight: Int?
-    var activity: String?
-    var sports: String?
-    var goals: String?
-    var preferences: String?
+    var userChoices: UserChoices!
     
     var userBaselineCalories: Int = 0
     var userCalorieswithDeficit: Int = 0
@@ -57,6 +51,10 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard userChoices != nil else{
+            fatalError()
+        }
+        
         calculateAllMacros()
         
         customScreen()
@@ -71,7 +69,7 @@ class ResultsViewController: UIViewController {
     }
     
     private func calculateAllMacros() {
-        var calculatorMacro = CalculatorMacro(userChoices: UserChoices(gender: gender, weight: weight, activity: activity, sport: sports, goals: goals, preferences: preferences))
+        var calculatorMacro = CalculatorMacro(userChoices: userChoices)
         
         userBaselineCalories = calculatorMacro.baselineCalories()
         userCalorieswithDeficit = calculatorMacro.caloriesWithDeficit()
@@ -87,23 +85,23 @@ class ResultsViewController: UIViewController {
     }
     
     private func customScreen() {
-        Visual.customLabel(to: resultsLabel, text: K.resultsTitle, font: K.welcomeTitlePolice, size: 35)
-        Visual.customLabel(to: resultsLabel2, text: K.resultsTitle2, font: K.welcomeTextPolice1, size: 22)
-        Visual.customLabel(to: totalCaloriesLabel, text: "\(userCalorieswithDeficit)", font: K.nextButtonPolice, size: 30)
+        Visual.customLabel(to: resultsLabel, text: Constants.resultsTitle, font: Constants.welcomeTitlePolice, size: 35)
+        Visual.customLabel(to: resultsLabel2, text: Constants.resultsTitle2, font: Constants.welcomeTextPolice1, size: 22)
+        Visual.customLabel(to: totalCaloriesLabel, text: "\(userCalorieswithDeficit)", font: Constants.nextButtonPolice, size: 30)
         
-        Visual.customLabel(to: proteinGrLabel, text: "\(userProteinAmount) g", font: K.welcomeTextPolice2, size: 20)
-        Visual.customLabel(to: carbsGrLabel, text: "\(userCarbsAmount) g", font: K.welcomeTextPolice2, size: 20)
-        Visual.customLabel(to: fatsGrLabel, text: "\(userFatsAmount) g", font: K.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: proteinGrLabel, text: "\(userProteinAmount) g", font: Constants.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: carbsGrLabel, text: "\(userCarbsAmount) g", font: Constants.welcomeTextPolice2, size: 20)
+        Visual.customLabel(to: fatsGrLabel, text: "\(userFatsAmount) g", font: Constants.welcomeTextPolice2, size: 20)
         
-        Visual.customLabel(to: proteinPctLabel, text: String(format: K.formatPct, userProteinPct), font: K.answerPolice, size: 18)
-        Visual.customLabel(to: carbsPctLabel, text: String(format: K.formatPct, userCarbsPct), font: K.answerPolice, size: 18)
-        Visual.customLabel(to: fatsPctLabel, text: String(format: K.formatPct, userFatsPct), font: K.answerPolice, size: 18)
+        Visual.customLabel(to: proteinPctLabel, text: String(format: Constants.formatPct, userProteinPct), font: Constants.answerPolice, size: 18)
+        Visual.customLabel(to: carbsPctLabel, text: String(format: Constants.formatPct, userCarbsPct), font: Constants.answerPolice, size: 18)
+        Visual.customLabel(to: fatsPctLabel, text: String(format: Constants.formatPct, userFatsPct), font: Constants.answerPolice, size: 18)
         
-        Visual.customLabel(to: proteinCalLabel, text: "\(userProteinCal) cal", font: K.answerPolice, size: 18)
-        Visual.customLabel(to: carbsCalLabel, text: "\(userCarbsCal) cal", font: K.answerPolice, size: 18)
-        Visual.customLabel(to: fatsCalLabel, text: "\(userFatsCal) cal", font: K.answerPolice, size: 18)
+        Visual.customLabel(to: proteinCalLabel, text: "\(userProteinCal) cal", font: Constants.answerPolice, size: 18)
+        Visual.customLabel(to: carbsCalLabel, text: "\(userCarbsCal) cal", font: Constants.answerPolice, size: 18)
+        Visual.customLabel(to: fatsCalLabel, text: "\(userFatsCal) cal", font: Constants.answerPolice, size: 18)
 
-        Visual.buttonShadowAndFont(to: recalculateButton, text: K.recalculateButtonTitle)
+        Visual.buttonShadowAndFont(to: recalculateButton, text: Constants.recalculateButtonTitle)
     }
     
     
@@ -119,16 +117,16 @@ class ResultsViewController: UIViewController {
     
     private func customChart(withDataSet chartDataSet: PieChartDataSet){
         
-        chartDataSet.colors = [K.proteinColor, K.carbsColor, K.fatsColor]
+        chartDataSet.colors = [Constants.proteinColor, Constants.carbsColor, Constants.fatsColor]
         
         pieChart.holeRadiusPercent = 0.60
         pieChart.transparentCircleRadiusPercent = 0.63
         pieChart.chartDescription?.text = ""
         pieChart.legend.enabled = false
         
-        proteinDataEntry.label = K.proteinLabel
-        carbsDataEntry.label = K.carbsLabel
-        fatsDataEntry.label = K.fatsLabel
+        proteinDataEntry.label = Constants.proteinLabel
+        carbsDataEntry.label = Constants.carbsLabel
+        fatsDataEntry.label = Constants.fatsLabel
 
     }
     

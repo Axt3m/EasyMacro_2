@@ -130,7 +130,6 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="R9Q-Qx-dsN"/>
                                     <segue destination="kLy-g8-B0l" kind="show" identifier="genderToWeight" id="FpC-z4-XOK"/>
                                 </connections>
                             </button>
@@ -156,7 +155,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="gbn-2a-oQh"/>
+                                    <action selector="buttonPressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="AQL-mf-khi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9o-S1-kdx">
@@ -177,7 +176,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button2Pressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="83v-Yh-5Z7"/>
+                                    <action selector="buttonPressed:" destination="W1O-nk-MSW" eventType="touchUpInside" id="8Bs-KY-SR6"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4bP-XA-O7m">
@@ -360,7 +359,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button3Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="rat-17-KhR"/>
+                                    <action selector="buttonPressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="1JD-Cd-Pqh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iur-un-MH4">
@@ -385,7 +384,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="LxH-Yk-hJ7"/>
+                                    <action selector="buttonPressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="iHR-7S-CXr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGM-zo-agI">
@@ -406,7 +405,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button4Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="pKf-ne-sSC"/>
+                                    <action selector="buttonPressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="3Sc-ht-U56"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1t-Zh-lR1">
@@ -427,7 +426,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button2Pressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="MBz-JM-nMw"/>
+                                    <action selector="buttonPressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="EPo-Lh-qfs"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="D3w-cA-4aS">
@@ -542,7 +541,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button3Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="KHG-rW-g7G"/>
+                                    <action selector="buttonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="xkG-XS-nHF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sV-0Y-m2w">
@@ -567,7 +566,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="bDm-Yh-Kxe"/>
+                                    <action selector="buttonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="Bbn-xD-LLr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6f-Rd-zV0">
@@ -588,7 +587,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button4Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="QAV-tz-zyF"/>
+                                    <action selector="buttonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="W7X-4y-t1L"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx6-7h-8Ig">
@@ -609,7 +608,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button2Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="Em7-rg-faq"/>
+                                    <action selector="buttonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="Ztr-kT-lVj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2G-G4-JoG">
@@ -630,7 +629,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button5Pressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="WT9-Cm-dZf"/>
+                                    <action selector="buttonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="N07-u7-ee8"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nUq-bd-DVI">
@@ -733,7 +732,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="A1b-cv-Kct"/>
+                                    <action selector="buttonPressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="xj7-qk-puc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cm6-nA-yy1">
@@ -754,7 +753,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button2Pressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="5JF-BL-zhF"/>
+                                    <action selector="buttonPressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="6lJ-CF-scE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kP-dN-qDW">
@@ -775,7 +774,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button3Pressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="JE5-TX-Teq"/>
+                                    <action selector="buttonPressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="HXG-1Y-G0H"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-pe-hyR">
@@ -816,7 +815,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="yws-cv-DmP"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="button1" destination="oM7-2A-vJG" id="XgD-yy-qzc"/>
+                        <outlet property="button1" destination="oM7-2A-vJG" id="Ptg-u9-AGb"/>
                         <outlet property="button2" destination="cm6-nA-yy1" id="7e3-ZP-0XE"/>
                         <outlet property="button3" destination="5kP-dN-qDW" id="LQa-s6-Y8l"/>
                         <outlet property="nextButton" destination="7Ej-mj-Wde" id="3zs-vx-VOX"/>
@@ -1182,7 +1181,7 @@
                         <outlet property="pieChart" destination="QYH-D6-ooD" id="eHA-F9-UIw"/>
                         <outlet property="proteinCalLabel" destination="XNA-ss-dQo" id="kXQ-DH-htx"/>
                         <outlet property="proteinGrLabel" destination="F7b-zS-zqv" id="lew-3Y-4GD"/>
-                        <outlet property="proteinPctLabel" destination="b2f-fA-2pG" id="btP-gP-Wfw"/>
+                        <outlet property="proteinPctLabel" destination="b2f-fA-2pG" id="NU2-kf-g9C"/>
                         <outlet property="recalculateButton" destination="1MB-IS-LMe" id="FsR-fv-6fp"/>
                         <outlet property="resultsLabel" destination="g9b-eK-Ijg" id="gcG-z0-pEz"/>
                         <outlet property="resultsLabel2" destination="FJp-MC-R4I" id="DBQ-BF-ccJ"/>

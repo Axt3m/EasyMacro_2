@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct K {
+struct Constants {
     
     //MARK: - WelcomeVC
     

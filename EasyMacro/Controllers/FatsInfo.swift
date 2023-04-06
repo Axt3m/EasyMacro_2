@@ -21,9 +21,9 @@ class FatsInfo: UIViewController {
     }
     
     private func customScreen() {
-        Visual.customLabel(to: fatsTitle, text: K.fatsTitleLabel, font: K.welcomeTitlePolice, size: 28)
+        Visual.customLabel(to: fatsTitle, text: Constants.fatsTitleLabel, font: Constants.welcomeTitlePolice, size: 28)
         
-        Visual.customLabel(to: fatsInfoLabel, text: K.fatsInfoLabel, font: K.welcomeTextPolice1, size: 15)
+        Visual.customLabel(to: fatsInfoLabel, text: Constants.fatsInfoLabel, font: Constants.welcomeTextPolice1, size: 15)
     }
     
 

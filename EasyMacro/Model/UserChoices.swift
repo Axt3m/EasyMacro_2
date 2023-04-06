@@ -18,32 +18,32 @@ struct UserChoices {
     
     mutating func getGender(with userGender: String) -> String {
         self.gender = userGender
-        return Test.unwrapOptionalString(gender)
+        return Unwrapping.optionalString(gender)
     }
 
     mutating func getWeight(with userWeight: Int) -> Int {
         self.weight = userWeight
-        return Test.unwrapOptionalInt(weight)
+        return Unwrapping.optionalInteger(weight)
     }
 
     mutating func getActivity(with userActivity: String) -> String {
         self.activity = userActivity
-        return Test.unwrapOptionalString(activity)
+        return Unwrapping.optionalString(activity)
     }
 
     mutating func getSport(with userSport: String) -> String {
         self.sport = userSport
-        return Test.unwrapOptionalString(sport)
+        return Unwrapping.optionalString(sport)
     }
 
     mutating func getGoals(with userGoals: String) -> String {
         self.goals = userGoals
-        return Test.unwrapOptionalString(goals)
+        return Unwrapping.optionalString(goals)
     }
 
     mutating func getPreferences(with userPreferences: String) -> String {
         self.preferences = userPreferences
-        return Test.unwrapOptionalString(preferences)
+        return Unwrapping.optionalString(preferences)
     }
     
     

@@ -20,11 +20,9 @@ class GoalsViewController: UIViewController {
     
     public var userGoals: String = ""
     
-    var userChoices = UserChoices()
-    var gender: String?
-    var weight: Int?
-    var activity: String?
-    var sports: String?
+    var userChoices: UserChoices!
+
+    var buttons: [UIButton] = []
     
     
     override func viewDidLoad() {
@@ -35,52 +33,46 @@ class GoalsViewController: UIViewController {
         
         customScreen()
         
+        buttons = [button1, button2, button3]
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.goalsToPreferences {
+        userChoices.goals = userGoals
+        if segue.identifier == Constants.goalsToPreferences {
             let preferencesVC = segue.destination as! PreferencesViewController
-            preferencesVC.gender = userChoices.getGender(with: Test.unwrapOptionalString(gender))
-            preferencesVC.weight = userChoices.getWeight(with: Test.unwrapOptionalInt(weight))
-            preferencesVC.activity = userChoices.getActivity(with: Test.unwrapOptionalString(activity))
-            preferencesVC.sports = userChoices.getActivity(with: Test.unwrapOptionalString(sports))
-            preferencesVC.goals = userChoices.getActivity(with: userGoals)
+            preferencesVC.userChoices = userChoices
         }
     }
     
-    @IBAction func button1Pressed(_ sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
+
         Visual.selectedButton(sender) {textButton in
             self.userGoals = textButton
         }
-        Visual.deselectButtons(button2, button3)
-    }
-    
-    @IBAction func button2Pressed(_ sender: UIButton) {
-        Visual.selectedButton(sender) {textButton in
-            self.userGoals = textButton
+        
+        var buttonsToDeselect = buttons
+        if let index = buttonsToDeselect.firstIndex(of: sender){
+            buttonsToDeselect.remove(at: index)
         }
-        Visual.deselectButtons(button1, button3)
-    }
-    
-    @IBAction func button3Pressed(_ sender: UIButton) {
-        Visual.selectedButton(sender) {textButton in
-            self.userGoals = textButton
+        if !buttonsToDeselect.isEmpty{
+            Visual.deselectButtons(buttonsToDeselect)
         }
-        Visual.deselectButtons(button1, button2)
+        
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
     }
     
     private func customScreen(){
-        Visual.customLabel(to: question5Label, text: K.goalsQuestion, font: K.questionPolice, size: 27)
+        Visual.customLabel(to: question5Label, text: Constants.goalsQuestion, font: Constants.questionPolice, size: 27)
     
-        Visual.customButton(to: button1, text: K.goalsAnswer1, isDefaultButton: true) {defaultTextButton in
+        Visual.customButton(to: button1, text: Constants.goalsAnswer1, isDefaultButton: true) {defaultTextButton in
             self.userGoals = defaultTextButton
         }
         
-        Visual.customButton(to: button2, text: K.goalsAnswer2)
-        Visual.customButton(to: button3, text: K.goalsAnswer3)
+        Visual.customButton(to: button2, text: Constants.goalsAnswer2)
+        Visual.customButton(to: button3, text: Constants.goalsAnswer3)
         
         Visual.buttonShadowAndFont(to: nextButton)
     }

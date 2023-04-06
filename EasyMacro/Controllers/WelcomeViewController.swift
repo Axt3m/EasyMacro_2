@@ -27,10 +27,10 @@ class WelcomeViewController: UIViewController {
     
     private func customScreen(){
         
-        Visual.customLabel(to: welcomeLabel, text: K.welcomeTitle, font: K.welcomeTitlePolice, size: 25)
-        Visual.customLabel(to: descriptionLabel1, text: K.welcomeText1, font: K.welcomeTextPolice1, size: 18)
-        Visual.customLabel(to: descriptionLabel2, text: K.welcomeText2, font: K.welcomeTextPolice2, size: 15)
-        Visual.buttonShadowAndFont(to: startButton, text: K.welcomeButtonTitle)
+        Visual.customLabel(to: welcomeLabel, text: Constants.welcomeTitle, font: Constants.welcomeTitlePolice, size: 25)
+        Visual.customLabel(to: descriptionLabel1, text: Constants.welcomeText1, font: Constants.welcomeTextPolice1, size: 18)
+        Visual.customLabel(to: descriptionLabel2, text: Constants.welcomeText2, font: Constants.welcomeTextPolice2, size: 15)
+        Visual.buttonShadowAndFont(to: startButton, text: Constants.welcomeButtonTitle)
         
     }
     
