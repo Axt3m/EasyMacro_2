@@ -236,7 +236,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="kLy-g8-B0l" eventType="touchUpInside" id="iI3-bS-9Ud"/>
+                                    <action selector="nextButtonPressed:" destination="kLy-g8-B0l" eventType="touchUpInside" id="IU1-03-7HO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Pee-Jb-uew">
@@ -337,7 +337,6 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="1VM-Mv-p3z" eventType="touchUpInside" id="fJN-Cd-rUZ"/>
                                     <segue destination="r4O-mG-nhV" kind="show" identifier="activityToSports" id="VU2-72-9IZ"/>
                                 </connections>
                             </button>
@@ -519,7 +518,6 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="r4O-mG-nhV" eventType="touchUpInside" id="mpo-0d-PbA"/>
                                     <segue destination="0W3-Eq-82Q" kind="show" identifier="sportsToGoals" id="GpG-ye-Pyg"/>
                                 </connections>
                             </button>
@@ -706,7 +704,6 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="0W3-Eq-82Q" eventType="touchUpInside" id="pJN-Pj-LIu"/>
                                     <segue destination="5i9-gJ-YfK" kind="show" identifier="goalsToPreferences" id="9mK-ov-owD"/>
                                 </connections>
                             </button>
@@ -1153,7 +1150,7 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="recalculatePressed:" destination="ORD-F5-j0c" eventType="touchUpInside" id="Slv-uP-V9J"/>
+                                    <action selector="recalculatePressed:" destination="ORD-F5-j0c" eventType="touchUpInside" id="1nL-i4-kNO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1220,7 +1217,6 @@
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="nextButtonPressed:" destination="5i9-gJ-YfK" eventType="touchUpInside" id="dq0-ky-zMs"/>
                                     <segue destination="ORD-F5-j0c" kind="show" identifier="preferencesToResults" id="zds-2v-umy"/>
                                 </connections>
                             </button>
